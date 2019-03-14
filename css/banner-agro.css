@@ -1,14 +1,16 @@
-.galeria {
-	background-size: cover;
-	background-position: center;
-	color: #fff;
-	min-height: 300px;
-	border: 5px solid white;
+@media (min-width: 1440px) {
+	.row-banner {
+		bottom: 90px;
+		position: relative;
+		margin: 0px;
+		padding: 0px;
+	}
 }
 
-.row {
-	margin-right: -6px;
-	margin-left: -6px;
+.galeria {
+	background-size: cover;
+	min-height: 250px;
+	border-radius: 5px;
 }
 
 .datos-banner {
@@ -18,11 +20,12 @@
 	color: #fff;
 }
 
-
 /*banner 1*/
 #galeria-1 {
 	background-image: url(/arquivos/b1.png);
 	text-align: left;
+	position: relative;
+	right: 30px;
 }
 
 /*banner 2*/
@@ -35,5 +38,38 @@
 #galeria-3 {
 	background-image: url(/arquivos/b3.png);
 	text-align: left;
+	position: relative;
+	left: 30px;
 }
 
+.texto-banner {
+	font-size: 22px;
+	font-weight: bolder;
+	position: relative;
+	bottom: 30px;
+	right: 20px
+}
+
+.boton-banner {
+	display: inline-block;
+	font-weight: 200;
+	color: white;
+	background-color: green;
+	border: 1px solid green;
+	font-size: 12px;
+	border-radius: 0;
+	width: 100px;
+	position: relative;
+	left: 150px
+}
+
+.boton-banner a {
+	color: white;
+	text-decoration: none;
+}
+
+
+pre {
+	background-color: transparent;
+	border: 0;
+}
