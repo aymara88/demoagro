@@ -1,0 +1,121 @@
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v3.2'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat" attribution="setup_tool" page_id="324512398205462">
+</div>
+
+<header class="header-container">
+
+    <div class="welcome-bar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-10">
+                    <span class="telef"><i class="fas fa-phone-volume"></i> <span> + </span>
+                        <vtex.cmc:telefone /></span>
+                </div><!-- .welcome -->
+                <div class="col-xs-2 text-right" id="nav-mi-cuenta">
+                    <nav class="navbar">
+                        <ul class="navbar-nav index-mi-cuenta">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="far fa-user"></i>
+                                    Mi cuenta</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="/account" title="Login">Entrar</a>
+                                    <a class="dropdown-item" href="/account/orders" title="Mis Pedidos">Mis Pedidos</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .welcome-bar -->
+
+    <div class="header">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm">
+                    <nav class="navbar navbar-expand-md navbar-light navmenu">
+                        <a class="navbar-left logo-position" href="https://demoagro.myvtex.com/"><img src="/arquivos/logo.png"
+                                alt="Green Food" /></a>
+                        <button class="navbar-toggler toggler-position" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse menu-position" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto menu-links">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">INICIO <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">SOBRE NOSOTROS</a>
+                                </li>
+                                <li class="nav-item dropdown active">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        CATERGORÍAS
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item submenu-links" href="/agro-categorias/alimentos-libres-de-azucar">Alimentos
+                                            Libres de Azúcar</a>
+                                        <a class="dropdown-item submenu-links" href="/agro-categorias/alimentos-libres-de-gluten">Alimentos
+                                            Libres de Gluten</a>
+                                        <a class="dropdown-item submenu-links" href="/agro-categorias/vegetales-organicos">Vegetales
+                                            Orgánicos</a>
+                                        <a class="dropdown-item submenu-links" href="/agro-categorias/frutas-organicas">Frutas
+                                            Orgánicas</a>
+                                        <a class="dropdown-item submenu-links" href="/agro-categorias/especias-de-tu-cocina">Especias
+                                            de tu Cocina</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">CONTÁCTANOS</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" />
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                    </nav>
+                    <div class="text-center cart-ico"><a href="#"><span style="font-size: 1.5em; color: green;"><i class="fas fa-shopping-cart"></i></span></a></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div><!-- .header -->
+
+</header><!-- .header-container -->
+
+<!--
+<nav class="visible-md visible-lg" id="top-menu">
+    <div class="container-fluid">
+        <vtex.cmc:departmentLinks />
+    </div>
+</nav>
+-->

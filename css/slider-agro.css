@@ -1,0 +1,188 @@
+@media (min-width: 320px) {
+    .carousel-inner {
+        max-height: 250px !important;
+    }
+
+    .carousel-caption h1,
+    p {
+        color: green;
+    }
+
+    .carousel-caption button {
+        border: 1px solid green !important;
+        width: 100px;
+    }
+
+    .carousel-caption {
+        bottom: 10px !important;
+        height: 150px;
+        background: rgba(255, 255, 255, 0.6);
+        padding: 0;
+    }
+
+    .texto-img {
+        margin-top: -10px !important;
+    }
+
+    .texto-img a {
+        text-decoration: none;
+        color: green !important;
+    }
+
+    .carousel-caption p {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .carousel-inner {
+        max-height: 300px !important;
+    }
+
+    .carousel-caption {
+        background: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        left: 15% !important;
+        top: 60px;
+        right: 15%;
+        z-index: 10;
+        padding: 40px;
+        text-align: center;
+        width: 70%;
+        height: 42%;
+        text-shadow: none !important;
+    }
+
+    .texto-img {
+        position: static;
+        top: 10px;
+        left: 10px;
+    }
+
+    .texto-img button {
+        position: relative;
+        top: 30px;
+    }
+
+    .texto-img a {
+        text-decoration: none;
+        color: green !important;
+    }
+
+    .carousel-caption p {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .carousel-inner {
+        max-height: 400px !important;
+    }
+
+    .carousel-caption {
+        left: 15% !important;
+        top: 70px;
+        width: 70%;
+        height: 45%;
+    }
+
+    .texto-img {
+        position: relative;
+        top: 30px !important;
+        left: 10px;
+    }
+
+    .texto-img button {
+        font-size: 12px;
+    }
+
+    .carousel-caption p {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .carousel-inner {
+        max-height: 500px !important;
+    }
+
+    .carousel-caption {
+        left: 15% !important;
+        top: 70px;
+        width: 70%;
+        height: 40%;
+    }
+
+    .texto-img {
+        position: relative;
+        top: 50px !important;
+        left: 10px;
+    }
+
+    .texto-img button {
+        font-size: 15px;
+    }
+
+    .carousel-caption p {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 40px;
+    }
+
+    .carousel-caption button {
+        width: 120px;
+    }
+}
+
+@media (min-width: 1540px) {
+
+    .carousel-inner {
+        max-height: 630px !important;
+    }
+
+    .carousel-caption {
+        left: 15% !important;
+        top: 130px;
+        width: 70%;
+        height: 40%;
+    }
+
+    .texto-img button {
+        font-size: 16px;
+    }
+
+    .carousel-caption p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 50px;
+    }
+
+    .carousel-caption button {
+        width: 130px;
+    }
+
+}

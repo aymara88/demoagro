@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+    background-color: white;
+    font-family: 'Raleway', Arial, sans-serif !important;
+}
+
+section {
+    min-height: 30vh;
+    min-width: 20vw;
+}

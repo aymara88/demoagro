@@ -1,0 +1,583 @@
+/* Small devices (landscape phones, 320px and up)*/
+@media (min-width: 320px) {
+
+    /*buscador*/
+
+    /** DISPLAY NONE ELEMENTS **/
+
+    .header .search .fulltext-search-box {
+        font-size: 12px !important;
+        margin-right: 0 !important;
+        width: 75% !important;
+    }
+
+    .header .search .btn-buscar {
+        font-size: 12px !important;
+        line-height: 30px !important;
+        border: 1px solid green !important;
+        width: 22% !important;
+        color: green;
+    }
+
+    /*estilo y posicionamiento del dato telefonico en la barra de welcome*/
+    .telef {
+        font-size: 13px;
+        opacity: .6;
+        position: absolute;
+        left: 40px;
+        top: 10px;
+    }
+
+    /*posicionamiento del menu Mi Cuenta de la barra de welcome*/
+    #nav-mi-cuenta {
+        position: relative;
+        right: 70px;
+        bottom: 15px;
+    }
+
+    /*posicionamiento de la imagen del logo antes de desplegar el toggler*/
+    .logo-position {
+        max-width: 70px;
+        margin-top: -7px;
+        right: 90px !important;
+        position: relative;
+    }
+
+    .cart-ico {
+        float: right;
+        position: relative;
+        top: -35px;
+        right: 10px;
+        display: flex;
+        align-self: flex-end;
+        margin: 0 0 0 auto;
+        z-index: 1;
+    }
+
+    /*fondo de los nav*/
+    .navmenu {
+        background-color: white !important;
+        float: left;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    /*caracteristicas del submenu de categorias de productos*/
+    .submenu-links {
+        margin-top: 10px;
+        color: black;
+        font-size: 12px;
+        opacity: .6;
+        font-weight: 400 !important;
+    }
+
+    /*caracteristicas de los link del menu nav bar*/
+    .menu-links li a {
+        margin-right: 20px;
+        color: black;
+        font-size: 14px;
+        text-decoration: none;
+        background: transparent;
+        font-weight: bolder !important;
+    }
+
+    /*altura del welcome bar*/
+    .welcome-bar {
+        height: 55px;
+    }
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+    /*margin del menu bar*/
+    .margin-menu {
+        margin: -20px 0 -50px 0;
+    }
+
+    /*Carrito*/
+    .cart-style-width {
+        width: 37px !important;
+    }
+
+    /*buscador*/
+
+    /** DISPLAY NONE ELEMENTS **/
+
+    .header .search .fulltext-search-box {
+        font-size: 12px !important;
+        margin-right: 0 !important;
+        width: 50% !important;
+    }
+
+    .header .search .btn-buscar {
+        font-size: 12px !important;
+        line-height: 30px !important;
+        border: 1px solid green !important;
+        color: green;
+    }
+
+
+    /*estilo y posicionamiento del dato telefonico en la barra de welcome*/
+    .telef {
+        font-size: 13px;
+        opacity: .6;
+        position: absolute;
+        left: 90px;
+        top: 10px;
+    }
+
+    /*posicionamiento del menu Mi Cuenta de la barra de welcome*/
+    #nav-mi-cuenta {
+        position: relative;
+        right: 70px;
+        bottom: 10px;
+    }
+
+    /*posicionamiento de la imagen del logo antes de desplegar el toggler*/
+    .logo-position {
+        max-width: 80px;
+        margin-top: -7px;
+        right: 0px !important;
+    }
+
+    .cart-ico {
+        float: right;
+        position: relative;
+        top: -60px;
+        right: 5px;
+        display: flex;
+        align-self: flex-end;
+        margin: 0 0 0 auto;
+        z-index: 1;
+    }
+
+    /*fondo de los nav*/
+    .navmenu {
+        background-color: white !important;
+        float: left;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    /*caracteristicas del submenu de categorias de productos*/
+    .submenu-links {
+        margin-top: 10px;
+        color: black;
+        font-size: 10px;
+        opacity: .6;
+        font-weight: 400 !important;
+    }
+
+    /*caracteristicas de los link del menu nav bar*/
+    .menu-links li a {
+        margin-right: 10px;
+        color: black;
+        font-size: 12px;
+        text-decoration: none;
+        background: transparent;
+        font-weight: 900 !important;
+    }
+
+    .menu-position {
+        position: relative;
+        bottom: 20px;
+        display: flex;
+        align-self: flex-end;
+        margin: 0 0 0 auto;
+    }
+
+    /*altura del welcome bar*/
+    .welcome-bar {
+        height: 60px;
+    }
+
+}
+
+/* Large devices (desktops, 1024px and up)*/
+@media (min-width: 1024px) {
+
+    /*margin del menu bar*/
+    .margin-menu {
+        margin: 0 0 -35px 0;
+    }
+
+    /*Carrito*/
+    .cart-position-large {
+        left: 20px;
+    }
+
+    .cart-style-width {
+        width: 37px !important;
+    }
+
+    /*buscador*/
+
+    /** DISPLAY NONE ELEMENTS **/
+
+    .header .search .fulltext-search-box {
+        font-size: 12px !important;
+        margin-right: 0 !important;
+        width: 50% !important;
+    }
+
+    .header .search .btn-buscar {
+        font-size: 12px !important;
+        border: 1px solid green !important;
+        line-height: 0px !important;
+        width: 25% !important;
+    }
+
+    /*estilo y posicionamiento del dato telefonico en la barra de welcome*/
+    .telef {
+        font-size: 13px;
+        opacity: .6;
+        position: absolute;
+        left: 110px;
+        top: 10px;
+    }
+
+    /*posicionamiento del menu Mi Cuenta de la barra de welcome*/
+    #nav-mi-cuenta {
+        position: relative;
+        right: 70px;
+        bottom: 10px;
+    }
+
+    /*posicionamiento de la imagen del logo antes de desplegar el toggler*/
+    .logo-position {
+        max-width: 90px;
+        margin-top: -7px;
+    }
+
+    .cart-ico {
+        float: right;
+        position: relative;
+        top: 20px;
+        right: 100px;
+        display: flex;
+        align-self: flex-end;
+        margin: 0 0 0 auto;
+        z-index: 1;
+    }
+
+    /*fondo de los nav*/
+    .navmenu {
+        background-color: white !important;
+        float: left;
+        padding: 0%;
+        margin: 0%;
+        left: 70px;
+        bottom: 15px;
+    }
+
+    /*caracteristicas del submenu de categorias de productos*/
+    .submenu-links {
+        margin-top: 10px;
+        color: black;
+        font-size: 12px;
+        opacity: .6;
+        font-weight: 400 !important;
+    }
+
+    /*caracteristicas de los link del menu nav bar*/
+    .menu-links li a {
+        margin-right: 15px;
+        color: black;
+        font-size: 14px;
+        text-decoration: none;
+        background: transparent;
+        font-weight: 900 !important;
+    }
+
+    .menu-position {
+        position: relative;
+        bottom: 20px;
+        left: 30px;
+        display: flex;
+        align-self: flex-end;
+        margin: 0 0 0 auto;
+    }
+
+    /*altura del welcome bar*/
+    .welcome-bar {
+        height: 60px;
+    }
+
+}
+
+/* Extra large devices (large desktops, 1440px and up)*/
+@media (min-width: 1440px) {
+
+    .margin-menu {
+        margin: -5px 0 -40px 0;
+    }
+
+    /*Carrito*/
+    .cart-position-large {
+        left: 30px;
+    }
+
+    /*buscador*/
+
+    /** DISPLAY NONE ELEMENTS **/
+
+    .header .search .fulltext-search-box {
+        font-size: 12px !important;
+        margin-right: 0 !important;
+        width: 50% !important;
+    }
+
+    .header .search .btn-buscar {
+        font-size: 12px !important;
+        border: 1px solid green !important;
+        line-height: 0px !important;
+        width: 50px !important;
+    }
+
+    .header .search {
+        margin-top: 0;
+        position: relative;
+        left: 250px;
+    }
+
+
+    /*estilo y posicionamiento del dato telefonico en la barra de welcome*/
+    .telef {
+        font-size: 13px;
+        opacity: .6;
+        position: absolute;
+        left: 110px;
+        top: 10px;
+    }
+
+    /*posicionamiento del menu Mi Cuenta de la barra de welcome*/
+    #nav-mi-cuenta {
+        position: relative;
+        right: 70px;
+        bottom: 10px;
+    }
+
+    /*posicionamiento de la imagen del logo antes de desplegar el toggler*/
+    .logo-position {
+        max-width: 90px;
+        margin-top: -7px;
+    }
+
+    .cart-ico {
+        float: right;
+        position: relative;
+        top: 20px;
+        right: 150px;
+        display: flex;
+        align-self: flex-end;
+        margin: 0 0 0 auto;
+        z-index: 1;
+    }
+
+    /*fondo de los nav*/
+    .navmenu {
+        background-color: white !important;
+        float: left;
+        padding: 0%;
+        margin: 0%;
+        left: 70px;
+        bottom: 15px;
+    }
+
+    /*caracteristicas del submenu de categorias de productos*/
+    .submenu-links {
+        margin-top: 10px;
+        color: black;
+        font-size: 14px;
+        opacity: .6;
+        font-weight: 400 !important;
+    }
+
+    /*caracteristicas de los link del menu nav bar*/
+    .menu-links li a {
+        margin-right: 30px;
+        color: black;
+        font-size: 16px;
+        text-decoration: none;
+        background: transparent;
+        font-weight: 900 !important;
+    }
+
+    .menu-position {
+        position: relative;
+        bottom: 20px;
+        left: 250px;
+        display: flex;
+        align-self: flex-end;
+        margin: 0 0 0 auto;
+    }
+
+    /*altura del welcome bar*/
+    .welcome-bar {
+        height: 60px;
+    }
+}
+
+/* Extra large devices (large desktops, 1540px and up)*/
+@media (min-width: 1540px) {
+
+    /*buscador*/
+
+    /** DISPLAY NONE ELEMENTS **/
+
+    .header .search .fulltext-search-box {
+        font-size: 12px !important;
+        margin-right: 0 !important;
+        width: 50% !important;
+    }
+
+    .header .search .btn-buscar {
+        font-size: 12px !important;
+        border: 1px solid green !important;
+        line-height: 0px !important;
+        width: 50px !important;
+    }
+
+    .header .search {
+        margin-top: 0;
+        position: relative;
+        left: 370px;
+    }
+
+    /*estilo y posicionamiento del dato telefonico en la barra de welcome*/
+    .telef {
+        font-size: 13px;
+        opacity: .6;
+        position: absolute;
+        left: 110px;
+        top: 10px;
+    }
+
+    /*posicionamiento del menu Mi Cuenta de la barra de welcome*/
+    #nav-mi-cuenta {
+        position: relative;
+        right: 70px;
+        bottom: 10px;
+    }
+
+    /*posicionamiento de la imagen del logo antes de desplegar el toggler*/
+    .logo-position {
+        max-width: 90px;
+        margin-top: -7px;
+    }
+
+    .cart-ico {
+        float: right;
+        position: relative;
+        top: 20px;
+        right: 160px;
+        display: flex;
+        align-self: flex-end;
+        margin: 0 0 0 auto;
+        z-index: 1;
+    }
+
+    /*fondo de los nav*/
+    .navmenu {
+        background-color: white !important;
+        float: left;
+        padding: 0%;
+        margin: 0%;
+        left: 70px;
+        bottom: 15px;
+    }
+
+    /*caracteristicas del submenu de categorias de productos*/
+    .submenu-links {
+        margin-top: 10px;
+        color: black;
+        font-size: 14px;
+        opacity: .6;
+        font-weight: 400 !important;
+    }
+
+    /*caracteristicas de los link del menu nav bar*/
+    .menu-links li a {
+        margin-right: 30px;
+        color: black;
+        font-size: 16px;
+        text-decoration: none;
+        background: transparent;
+        font-weight: 900 !important;
+    }
+
+    .menu-position {
+        position: relative;
+        bottom: 20px;
+        left: 400px;
+        display: flex;
+        align-self: flex-end;
+        margin: 0 0 0 auto;
+    }
+
+    /*altura del welcome bar*/
+    .welcome-bar {
+        height: 60px;
+    }
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    z-index: 1;
+}
+
+.index-mi-cuenta {
+    z-index: 2;
+}
+
+/*fondo del welcome bar y de los nav, borde inferior divisor gris*/
+.welcome-bar,
+nav {
+    background-color: white;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+/*caracteristicas generales del welcome bar*/
+.welcome-bar p,
+.welcome-bar a,
+.welcome-bar span {
+    color: black;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+}
+
+/*efecto en el welcome bar de los links al pasar sobre ellos*/
+.welcome-bar a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+/**/
+.welcome-bar .help-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*carrito estilo*/
+
+.cart-style {
+    color: gray !important;
+    bottom: 5px;
+}
+
+.header .mini-cart span.badge {
+    background-color: green !important;
+    vertical-align: top;
+    position: absolute;
+    top: -9px;
+    right: -15px;
+}

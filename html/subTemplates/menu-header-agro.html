@@ -1,0 +1,104 @@
+<script src="/arquivos/change-name-search.js"></script>
+
+<div class="header">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm margin-menu">
+                <nav class="navbar navbar-expand-md navbar-light navmenu">
+                    <a class="navbar-left logo-position" href="https://demoagro.myvtex.com/"><img src="/arquivos/logo.png"
+                            alt="Green Food" /></a>
+                    <button class="navbar-toggler toggler-position" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse menu-position" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto menu-links">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">INICIO <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">SOBRE NOSOTROS</a>
+                            </li>
+                            <li class="nav-item dropdown active">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    CATERGORÍAS
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item submenu-links" href="/agro-categorias/alimentos-libres-de-azucar">Alimentos
+                                        Libres de Azúcar</a>
+                                    <a class="dropdown-item submenu-links" href="/agro-categorias/alimentos-libres-de-gluten">Alimentos
+                                        Libres de Gluten</a>
+                                    <a class="dropdown-item submenu-links" href="/agro-categorias/vegetales-organicos">Vegetales
+                                        Orgánicos</a>
+                                    <a class="dropdown-item submenu-links" href="/agro-categorias/frutas-organicas">Frutas
+                                        Orgánicas</a>
+                                    <a class="dropdown-item submenu-links" href="/agro-categorias/especias-de-tu-cocina">Especias
+                                        de tu Cocina</a>
+                                </div>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">CONTÁCTANOS</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search">
+                        <vtex.cmc:fullTextSearchBox />
+                    </div><!-- .search -->
+                </nav>
+                <div class="text-center cart-ico">
+                    <div class="mini-cart mini-cart-xs text-right col-xs-3
+                            visible-xs">
+                        <a title="Carrito de Compras" href="/checkout/#/cart" class="btn btn-default
+                                cart-style">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="badge bg-danger
+                                    mini-cart-qty-admake">12</span>
+                        </a>
+                    </div><!-- .mini-cart-xs -->
+
+                    <div class="mini-cart col-mini-cart col-xs-1 col-sm-1
+                            col-md-3 col-lg-2 hidden-xs cart-position-large">
+                        <a title="Carrito de Compras" href="/checkout/#/cart" class="btn btn-default
+                                btn-block btn-mini-cart cart-style
+                                cart-style-width">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="hidden-sm mini-cart-label"></span>
+                            <span class="badge bg-danger
+                                    mini-cart-qty-admake">0</span>
+                        </a>
+                        <div id="mini-cart-admake-aux" class="hidden">
+                            <vtex.cmc:miniCart />
+                            <vtex.cmc:AmountItemsInCart />
+                        </div><!-- #mini-cart-admake-aux -->
+                        <div id="mini-cart-admake" style="display:
+                                        none;">
+                            <div class="mini-cart-header"></div>
+                            <div class="mini-cart-itens">
+                                <!-- recebe itens -->
+                            </div>
+                            <div class="mini-cart-footer">
+                                <div class="mini-cart-totais">
+                                    <strong id="mini-cart-admake-total" class="pull-right">
+                                        <!-- recebe valor total --></strong>
+                                    <span>Total</span>
+                                </div>
+                                <div class="mini-cart-botao">
+                                    <a href="/checkout/#/cart" class="btn btn-block
+                                                    btn-verde
+                                                    btn-finalizar-compra">Finalizar
+                                        Pedido</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- .mini-cart -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div><!-- .header -->

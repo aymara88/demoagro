@@ -1,0 +1,39 @@
+.galeria {
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	min-height: 300px;
+	border: 5px solid white;
+}
+
+.row {
+	margin-right: -6px;
+	margin-left: -6px;
+}
+
+.datos-banner {
+	padding: 100px 30px 50px 50px;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+
+
+/*banner 1*/
+#galeria-1 {
+	background-image: url(/arquivos/b1.png);
+	text-align: left;
+}
+
+/*banner 2*/
+#galeria-2 {
+	background-image: url(/arquivos/b2.png);
+	text-align: left;
+}
+
+/*banner 3*/
+#galeria-3 {
+	background-image: url(/arquivos/b3.png);
+	text-align: left;
+}
+
