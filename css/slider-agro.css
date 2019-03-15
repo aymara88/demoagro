@@ -9,7 +9,6 @@
     }
 
     .carousel-caption button {
-        border: 1px solid green !important;
         width: 100px;
     }
 
@@ -139,6 +138,7 @@
 
     .texto-img button {
         font-size: 15px;
+        width: 150px;
     }
 
     .carousel-caption p {
@@ -185,4 +185,10 @@
         width: 130px;
     }
 
+}
+
+.carousel-caption button {
+    border-radius: 0;
+    background: transparent !important;
+    border: 1px solid green !important;
 }
