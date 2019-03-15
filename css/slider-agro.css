@@ -117,6 +117,12 @@
     }
 }
 
+@media (min-width: 1320px) {
+    .carousel-caption {
+        height: 35%;
+    }
+}
+
 @media (min-width: 1440px) {
 
     .carousel-inner {

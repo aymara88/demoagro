@@ -7,19 +7,21 @@
     <vtex:metaTags />
     <vtex:template id="commonStyles" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/arquivos/logo-agro.png" />
     <link href="/arquivos/main.css" rel="stylesheet" type="text/css" />
     <link href="/arquivos/footer-agro.css" rel="stylesheet" type="text/css" />
     <link href="/arquivos/header-agro.css" rel="stylesheet" type="text/css" />
     <link href="/arquivos/slider-agro.css" rel="stylesheet" type="text/css" />
     <link href="/arquivos/banner-agro.css" rel="stylesheet" type="text/css" />
+    <link href="/arquivos/somos-green-agro.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous" />
-
+    <script src="/arquivos/main.js"></script>
 
     <script>
-        console.log('1head')
+        console.log('lov')
     </script>
 
 </head>
@@ -50,31 +52,9 @@
         </div>
         <!--  SubTemplate: banners -->
 
-
-        <section id="home-content" class="container">
-            <div id="category-extra-middle"></div>
-
-            <!-- Inicio de banner-->
-            <div class-="fullbanner">
-                <vtex:contentPlaceHolder id="bannersegmentado" />
-            </div>
-            <!-- Fin de banner -->
-
-            <div id="category-extra-vitrine-1"></div>
-
-            <div class="showcase-default showcase-owl">
-                <vtex:contentPlaceHolder id="Destaques" />
-            </div>
-
-            <div id="category-extra-vitrine-2"></div>
-
-            <div class="showcase-default showcase-owl">
-                <vtex:contentPlaceHolder id="Lançamentos" />
-            </div>
-
-        </section><!-- #content -->
-
-        <div id="category-extra-bottom"></div>
+        <!--  SubTemplate: somos-green -->
+        <vtex:template id="somos-green-agro" />
+        <!-- /SubTemplate: somos-green -->
 
         <!--  SubTemplate: Footer -->
         <vtex:template id="footer-agro" />

@@ -1,0 +1,159 @@
+@media (min-width: 320px) {
+    .container {
+        margin-top: 10px;
+    }
+
+    #col-somos-green {
+        margin-top: 10px;
+    }
+
+    .text-center p {
+        font-size: 13px;
+        color: black;
+        opacity: .6;
+    }
+
+    .row-logos-green {
+        margin-top: 10px;
+        margin-left: 10px !important;
+    }
+
+    .row-logos-green p {
+        font-size: 10px;
+        color: black;
+        opacity: .8;
+    }
+
+    .div-logo {
+        border: 1px solid lightgrey;
+        max-width: 45% !important;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding-top: 30px;
+    }
+
+    .p-logo-primero {
+        font-weight: bolder;
+        font-size: 12px !important;
+        opacity: 1 !important;
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 768px) {
+    .div-logo {
+        border: 1px solid lightgrey;
+        max-width: 22% !important;
+        margin-right: 10px;
+        padding-top: 30px;
+    }
+
+    .p-logo-primero {
+        font-weight: bolder;
+        font-size: 11px !important;
+        opacity: 1 !important;
+        margin-top: 5px;
+    }
+
+    #fondo-somos-green {
+        position: relative;
+        right: 10px;
+        top: 60px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #fondo-somos-green {
+        position: relative;
+        right: 10px;
+        top: 60px;
+    }
+
+    .text-center h1 {
+        font-size: 35px;
+    }
+
+    .text-center p {
+        font-size: 16px;
+        color: black;
+        opacity: .6;
+    }
+
+    .row-logos-green p {
+        font-size: 10px;
+        color: black;
+        opacity: .8;
+    }
+
+    .row-logos-green {
+        margin-top: 10px;
+        margin-left: 30px !important;
+    }
+}
+
+@media (min-width: 1320px) {
+    #fondo-somos-green {
+        top: 0;
+    }
+
+    .row-logos-green {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        margin-top: 0;
+    }
+
+    #fondo-somos-green {
+        max-width: 140%;
+        position: relative;
+        right: 40px;
+        top: 0;
+    }
+
+    .text-center h1 {
+        font-size: 45px;
+    }
+
+    .text-center p {
+        font-size: 16px;
+        color: black;
+        opacity: .6;
+    }
+
+    .row-logos-green {
+        margin-top: 40px;
+        position: relative;
+        left: 33px;
+    }
+
+    .row-logos-green p {
+        font-size: 10px;
+        color: black;
+        opacity: .8;
+    }
+
+    .div-logo {
+        border: 1px solid lightgrey;
+        max-width: 19% !important;
+        margin-right: 20px;
+        padding-top: 30px;
+    }
+
+    .p-logo-primero {
+        font-weight: bolder;
+        font-size: 12px !important;
+        opacity: 1 !important;
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 1540px) {
+    .row-logos-green {
+        margin-top: 40px;
+        position: relative;
+        margin-left: 0;
+    }
+}
