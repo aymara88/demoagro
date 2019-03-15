@@ -1,9 +1,106 @@
+@media (min-width: 320px) {
+	.galeria {
+		min-height: 0 !important;
+	}
+
+	#galeria-1 {
+		margin: 10px 10px 10px 10px;
+	}
+
+	#galeria-2 {
+		margin: 0 10px 10px 10px;
+	}
+
+	#galeria-3 {
+		margin: 0 10px 0 10px;
+	}
+
+	.texto-banner {
+		font-size: 25px;
+		font-weight: bolder;
+		position: relative;
+		bottom: 50px;
+		right: 40px;
+	}
+
+	.boton-banner {
+		left: 70px;
+	}
+}
+
+@media (min-width: 768px) {
+	#galeria-1 {
+		position: relative;
+		right: 10px;
+		margin: 0;
+	}
+
+	#galeria-2 {
+		margin: 0;
+	}
+
+	#galeria-3 {
+		position: relative;
+		left: 10px;
+		margin: 0;
+	}
+
+	.boton-banner {
+		left: 10px;
+	}
+
+	.row-banner {
+		margin-top: 10px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.boton-banner {
+		left: 110px;
+	}
+
+	.row-banner {
+		bottom: 40px;
+		position: relative;
+		margin: 0;
+		padding: 0;
+	}
+}
+
 @media (min-width: 1440px) {
 	.row-banner {
 		bottom: 90px;
 		position: relative;
-		margin: 0px;
-		padding: 0px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.texto-banner {
+		font-size: 25px;
+		font-weight: bolder;
+		position: relative;
+		bottom: 50px;
+		right: 40px
+	}
+
+	.boton-banner {
+		left: 170px;
+	}
+
+	#galeria-1 {
+		position: relative;
+		right: 30px;
+		margin: 0;
+	}
+
+	#galeria-2 {
+		margin: 0;
+	}
+
+	#galeria-3 {
+		position: relative;
+		left: 30px;
+		margin: 0;
 	}
 }
 
@@ -24,8 +121,6 @@
 #galeria-1 {
 	background-image: url(/arquivos/b1.png);
 	text-align: left;
-	position: relative;
-	right: 30px;
 }
 
 /*banner 2*/
@@ -38,38 +133,22 @@
 #galeria-3 {
 	background-image: url(/arquivos/b3.png);
 	text-align: left;
-	position: relative;
-	left: 30px;
 }
 
-.texto-banner {
-	font-size: 22px;
-	font-weight: bolder;
-	position: relative;
-	bottom: 30px;
-	right: 20px
+.boton-banner a {
+	color: white !important;
+	text-decoration: none !important;
 }
 
 .boton-banner {
 	display: inline-block;
 	font-weight: 200;
 	color: white;
-	background-color: green;
-	border: 1px solid green;
-	font-size: 12px;
-	border-radius: 0;
-	width: 100px;
+	background-color: green !important;
+	border: 1px solid green !important;
+	font-size: 13px !important;
+	border-radius: 0 !important;
+	width: 120px;
 	position: relative;
-	left: 150px
-}
-
-.boton-banner a {
-	color: white;
-	text-decoration: none;
-}
-
-
-pre {
-	background-color: transparent;
-	border: 0;
+	top: 20px;
 }
