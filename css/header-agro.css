@@ -44,12 +44,9 @@
     }
 
     .cart-ico {
-        float: right;
         position: relative;
         top: -35px;
-        right: 10px;
-        display: flex;
-        align-self: flex-end;
+        left: 215px;
         margin: 0 0 0 auto;
         z-index: 1;
     }
@@ -101,6 +98,15 @@
         width: 37px !important;
     }
 
+    .header .mini-cart {
+        width: 90px;
+    }
+
+    .cart-ico {
+        top: -60px;
+        left: 664px;
+    }
+
     /*buscador*/
 
     /** DISPLAY NONE ELEMENTS **/
@@ -140,17 +146,6 @@
         max-width: 80px;
         margin-top: -7px;
         right: 0px !important;
-    }
-
-    .cart-ico {
-        float: right;
-        position: relative;
-        top: -60px;
-        right: 5px;
-        display: flex;
-        align-self: flex-end;
-        margin: 0 0 0 auto;
-        z-index: 1;
     }
 
     /*fondo de los nav*/
@@ -204,12 +199,13 @@
     }
 
     /*Carrito*/
-    .cart-position-large {
-        left: 20px;
-    }
-
     .cart-style-width {
         width: 37px !important;
+    }
+
+    .cart-ico {
+        top: 15px;
+        left: 20px;
     }
 
     /*buscador*/
@@ -241,25 +237,15 @@
     /*posicionamiento del menu Mi Cuenta de la barra de welcome*/
     #nav-mi-cuenta {
         position: relative;
-        right: 70px;
+        right: 40px;
         bottom: 10px;
+        width: 10px;
     }
 
     /*posicionamiento de la imagen del logo antes de desplegar el toggler*/
     .logo-position {
         max-width: 90px;
         margin-top: -7px;
-    }
-
-    .cart-ico {
-        float: right;
-        position: relative;
-        top: 20px;
-        right: 100px;
-        display: flex;
-        align-self: flex-end;
-        margin: 0 0 0 auto;
-        z-index: 1;
     }
 
     /*fondo de los nav*/
@@ -309,7 +295,8 @@
 
 @media (min-width: 1320px) {
     .cart-ico {
-        right: 150px;
+        top: 15px;
+        left: 255px;
     }
 
     .menu-position {
@@ -331,8 +318,9 @@
     }
 
     /*Carrito*/
-    .cart-position-large {
-        left: 30px;
+    .cart-ico {
+        top: 15px;
+        left: 290px;
     }
 
     /*buscador*/
@@ -371,7 +359,7 @@
     /*posicionamiento del menu Mi Cuenta de la barra de welcome*/
     #nav-mi-cuenta {
         position: relative;
-        right: 70px;
+        right: 0;
         bottom: 10px;
     }
 
@@ -379,17 +367,6 @@
     .logo-position {
         max-width: 90px;
         margin-top: -7px;
-    }
-
-    .cart-ico {
-        float: right;
-        position: relative;
-        top: 20px;
-        right: 150px;
-        display: flex;
-        align-self: flex-end;
-        margin: 0 0 0 auto;
-        z-index: 1;
     }
 
     /*fondo de los nav*/
@@ -436,6 +413,13 @@
     }
 }
 
+@media (min-width: 1510){
+    /*carrito*/
+    .cart-ico {
+        top: 15px;
+        left: 340px;
+    }
+}
 /* Extra large devices (large desktops, 1540px and up)*/
 @media (min-width: 1540px) {
 
@@ -471,28 +455,16 @@
         top: 10px;
     }
 
-    /*posicionamiento del menu Mi Cuenta de la barra de welcome*/
-    #nav-mi-cuenta {
-        position: relative;
-        right: 70px;
-        bottom: 10px;
-    }
-
     /*posicionamiento de la imagen del logo antes de desplegar el toggler*/
     .logo-position {
         max-width: 90px;
         margin-top: -7px;
     }
 
+    /*carrito*/
     .cart-ico {
-        float: right;
-        position: relative;
-        top: 20px;
-        right: 160px;
-        display: flex;
-        align-self: flex-end;
-        margin: 0 0 0 auto;
-        z-index: 1;
+        top: 15px;
+        left: 370px;
     }
 
     /*fondo de los nav*/
@@ -587,7 +559,6 @@ nav {
 
 .cart-style {
     color: gray !important;
-    bottom: 5px;
 }
 
 .header .mini-cart span.badge {
@@ -596,4 +567,15 @@ nav {
     position: absolute;
     top: -9px;
     right: -15px;
+}
+
+/*barra de usuario de televentas*/
+.cc-toolbar {
+    margin: 0;
+    padding: 0;
+    height: 60px
+}
+
+.carousel-caption {
+    z-index: 0 !important;
 }

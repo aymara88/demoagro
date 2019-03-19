@@ -2,32 +2,45 @@
 /* Estilos del Footer */
 
 @media (min-width: 320px) {
+    .footer-link {
+        position: relative;
+        right: 5px;
+
+    }
+
     .social-media-position {
         margin: 0px;
         padding: 0px;
     }
+
     .social-media-position ul {
         position: absolute;
         left: -10px;
     }
+
     .social-media-position .pago-img {
         position: absolute;
         left: -10px;
     }
+
     .social-media-position b {
         position: relative;
         left: -10px;
     }
+
     .space-suscripcion {
         height: 30px;
     }
+
     .suscripcion {
         display: inline-block;
         margin-top: 40px;
     }
+
     .social-media-ico-size {
         font-size: 20px !important;
     }
+
     .row-social-media {
         position: relative;
         margin-top: 10px;
@@ -35,43 +48,56 @@
 }
 
 @media (min-width: 768px) {
+    .footer-link {
+        right: 0;
+        left: 10px;
+    }
+
     .social-media-position {
         margin: 0px;
         padding: 0px;
         margin-bottom: 20px;
         max-width: 70% !important;
     }
+
     .social-media-position ul {
         position: absolute;
         left: -10px;
     }
+
     .social-media-position .pago-img {
         position: absolute;
         left: -10px;
     }
+
     .social-media-position b {
         position: relative;
         left: -10px;
     }
+
     .space-suscripcion {
         height: 30px;
     }
+
     .suscripcion {
         display: inline-block;
         margin-top: 0px;
     }
+
     .social-media-ico-size {
         font-size: 20px !important;
     }
+
     .row-social-media {
         position: relative;
         margin-top: 10px;
     }
+
     .row-footer {
         margin: 0 10px 0 10px !important;
     }
 
-    .col-media-social{
+    .col-media-social {
         max-width: 20%;
     }
 
@@ -82,30 +108,38 @@
 }
 
 @media (min-width: 1024px) {
+    .footer-link {
+        left: 210px;
+    }
+
     #copyright {
         position: relative;
         left: 20px !important;
     }
 
-    .social-media-position{
+    .social-media-position {
         max-width: 100% !important;
     }
 }
 
 @media (min-width: 1440px) {
+
     .col-large-sobre-nosotros {
         max-width: 20% !important;
     }
+
     .col-large-informacion {
         max-width: 15% !important;
     }
+
     .col-large-enterate {
         max-width: 30% !important;
         left: -50px;
     }
+
     #copyright {
         position: relative;
-        left: 20px !important;
+        left: 25px !important;
     }
 }
 
@@ -133,7 +167,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .footer {
@@ -189,4 +223,13 @@
 
 .social-media-ico-color {
     color: green !important;
+}
+
+.footer-link a {
+    font-size: 13px;
+    text-decoration: none !important;
+}
+
+.footer-link a:link, a:visited, a:hover, a:active {
+    color: black !important;
 }
