@@ -1,0 +1,51 @@
+.productname {
+    display: block;
+}
+
+.productname a {
+    color: green !important;
+    font-size: 15px;
+    font-weight: bolder;
+    line-height: 20px;
+}
+
+.catalogo {
+    width: 23% !important;
+    border: 1px solid gray;
+    height: 260px;
+    width: 200px;
+}
+
+.image-product {
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.n4colunas {
+    padding-top: 30px;
+    margin-left: 124px;
+}
+
+.n4colunas>ul>li {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    padding: 20px 15px;
+    margin-right: 10px;
+}
+
+.old-price {
+    display: block;
+}
+
+.add {
+    background-color: green;
+}
+
+.add a {
+    color: white;
+    text-decoration: none;
+}
+
+
