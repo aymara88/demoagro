@@ -1,51 +1,201 @@
-.productname {
-    display: block;
+/** ************************************************************************************ **/
+/** *********** CARRUSEL **/
+/** ************************************************************************************ **/
+
+.Carrusel h2 {
+    display: none;
 }
 
-.productname a {
-    color: green !important;
-    font-size: 15px;
-    font-weight: bolder;
+.Carrusel .imageContainer {
+    opacity: 1;
+    display: block;
+    padding: 10px 15px;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
+.Carrusel .productImage {
+    display: block;
+    margin-bottom: 10px;
+    position: relative !important;
+}
+
+a.productImage {
+    display: block;
+    margin-bottom: 10px;
+    position: relative !important;
+}
+
+.Carrusel .productImage:after {
+    background-color: green;
+    content: "VER MÁS";
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    padding: 6px 12px;
+    border: 0;
+    border-radius: 0px;
+    width: auto;
+    height: 26px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -14px 0 0 -33px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+    letter-spacing: 0.1rem;
+}
+
+.Carrusel .imageContainer:hover .productImage:after {
+    visibility: visible;
+    opacity: 1;
+}
+
+.Carrusel .productImage img {
+    display: block;
+    max-width: 100%;
+    height: auto ! important;
+    width: auto ! important;
+    margin: 0 auto;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
+.Carrusel .imageContainer:hover img {
+    opacity: .5;
+}
+
+.Carrusel .lead {
+    margin-bottom: 10px;
+    line-height: 0.7;
+    height: 42px;
+}
+
+.Carrusel h3.lead a {
+    color: #7F7F7F;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
     line-height: 20px;
 }
 
-.catalogo {
-    width: 23% !important;
-    border: 1px solid gray;
-    height: 260px;
-    width: 200px;
-}
-
-.image-product {
+.Carrusel .price .bestPrice {
     display: block;
-    margin-bottom: 10px;
-    position: relative;
+    color: green;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 20px;
 }
 
-.n4colunas {
-    padding-top: 30px;
-    margin-left: 124px;
-}
-
-.n4colunas>ul>li {
-    display: inline-block;
-    vertical-align: top;
-    width: 100%;
-    padding: 20px 15px;
-    margin-right: 10px;
-}
-
-.old-price {
+.Carrusel .btn-add-buy-button-asynchronous {
+    border-radius: 0;
+    background-color: rgba(13, 112, 13, 0.829);
+    font-size: 0;
+    font-weight: 300;
+    color: #fff;
+    padding: 9px 12px;
     display: block;
+    width: 160px;
+    margin: 0 auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
-.add {
+.Carrusel .btn-add-buy-button-asynchronous:hover {
     background-color: green;
 }
 
-.add a {
-    color: white;
-    text-decoration: none;
+.Carrusel .btn-add-buy-button-asynchronous:after {
+    content: "AÑADIR A LA BOLSA";
+    font-size: 11px;
+}
+
+.regular-block .product-image {
+    display: block;
+    margin-bottom: 10px;
+    position: relative !important;
+}
+
+.regular-block a.product-image {
+    display: block;
+    margin-bottom: 10px;
+    position: relative !important;
+}
+
+.regular-block .product-image:after {
+    background-color: green;
+    content: "VER MÁS";
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    padding: 6px 12px;
+    border: 0;
+    border-radius: 0px;
+    width: auto;
+    height: 26px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -14px 0 0 -33px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+    letter-spacing: 0.1rem;
+}
+
+.regular-block .product-image img {
+    display: block;
+    max-width: 100%;
+    height: auto ! important;
+    width: auto ! important;
+    margin: 0 auto;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
+.product-name a {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: gray !important;
+}
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+    color: green !important;
+    opacity: 1;
 }
 
 
+/***************Otras clases para el carrusel****************/
+.bg-padding {
+    padding: 35px 0;
+}
+
+.titulo-style {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.regular-block .owl-controls .owl-buttons>div.owl-prev,
+.showcase-sin-azucar .owl-controls .owl-buttons>div.owl-prev {
+    left: -25px;
+}
+
+.regular-block .owl-controls .owl-buttons>div.owl-next,
+.showcase-sin-azucar .owl-controls .owl-buttons>div.owl-next {
+    right: -25px;
+}
+
+.price{
+    display: block;
+}
+
+.price .best-price{
+    display: block;
+}

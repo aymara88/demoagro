@@ -1,0 +1,74 @@
+#institucional-extra-top {
+    height: 40px;
+}
+
+#institucional-extra-middle {
+    height: 10px;
+}
+
+#institucional-extra-bottom {
+    height: 10px;
+}
+
+.list-inline{
+    margin-left: 0 !important;
+}
+
+@media (min-width: 1560px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+/** ************************************************************************************ **/
+/** *********** INSTITUCIONAL **/
+/** ************************************************************************************ **/
+#institucional-content {
+    margin-bottom: 55px;
+}
+
+.titulo-institucional {
+    font-size: 30px;
+    color: #63666A;
+    border-bottom: 0;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.conteudo-institucional {
+    color: #63666A;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: justify;
+}
+
+.conteudo-institucional p {
+    color: #63666A;
+    font-size: 13px;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+.conteudo-institucional h3 {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.conteudo-institucional h4 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.conteudo-institucional ul {
+    padding-left: 20px;
+}
+
+.conteudo-institucional ul li {
+    list-style-type: disc;
+    color: #63666A;
+    font-size: 13px;
+    line-height: 2rem;
+}
