@@ -1,0 +1,289 @@
+/* Extra small devices (portrait pones, less than 576px)*/
+@media (max-width: 320px) {
+    .header .mini-cart span.badge {
+        top: -5px;
+        right: 5px;
+    }
+
+    .navbar-toggler {
+        position: relative;
+        right: 40px;
+    }
+
+    .navbar-nav>li {
+        margin-right: 20px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 386px) and (max-width: 575.98px) {
+    .form-inline {
+        margin-top: 30px;
+    }
+
+    .header .search .fulltext-search-box {
+        width: 75%;
+    }
+
+    .header .mini-cart {
+        position: relative;
+        top: 10px;
+    }
+
+    .col-xs-10 {
+        width: 83.33333333% !important;
+    }
+
+    .row-search-cart {
+        margin: 20px 0 20px 0;
+    }
+
+    .logo-position {
+        position: relative;
+        left: 50px;
+        margin-bottom: 30px;
+    }
+
+    .navbar-toggler {
+        position: relative;
+        right: 70px;
+    }
+
+    button[aria-expanded="true"] {
+        right: 100px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .header .mini-cart {
+        position: relative;
+        left: 650px;
+        margin-top: 10px;
+    }
+
+    .header .search {
+        right: 100px;
+    }
+
+    .row-search-cart {
+        margin-top: 20px;
+    }
+
+    .navbar-toggler {
+        position: relative;
+        right: 170px;
+    }
+
+    .col-menu {
+        margin: 0 20px 0 20px;
+    }
+
+    .logo-position {
+        left: 190px;
+        position: relative;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar-nav>li {
+        margin-right: 0;
+        font-size: 13px;
+    }
+
+    .navbar-brand>img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .header .search .fulltext-search-box {
+        width: 60px;
+        position: relative;
+        right: 40px;
+    }
+
+    .header .search .btn-buscar {
+        width: 40px;
+        position: relative;
+        left: 20px;
+        bottom: 34px;
+    }
+
+    .header .search {
+        margin-top: 20px !important;
+    }
+
+    .header .mini-cart {
+        top: 20px;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar-nav>li {
+        margin-right: 20px;
+        font-size: 14px;
+    }
+
+    .header .search .fulltext-search-box {
+        width: 100%;
+        position: relative;
+        right: 50px;
+    }
+
+    .header .search .btn-buscar {
+        position: relative;
+        left: 12px;
+        bottom: 34px;
+        line-height: 20px !important;
+    }
+
+    .header .mini-cart {
+        top: 10px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) and (max-width: 1470px) {
+    .navbar-expand-md .navbar-collapse {
+        position: relative;
+        top: 20px;
+    }
+
+    .header .search .fulltext-search-box {
+        width: 100%;
+        position: relative;
+        right: 40px;
+        top: 20px;
+    }
+
+    .header .search .btn-buscar {
+        width: 75%;
+        line-height: 20px !important;
+        position: relative;
+        left: 30px;
+        bottom: 14px;
+    }
+
+    .header .search {
+        right: 20px;
+    }
+
+    .header .mini-cart {
+        top: 30px;
+    }
+
+    .navbar-nav>li {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .submenu-links {
+        font-size: 16px;
+    }
+
+    .navbar-nav ul {
+        position: relative;
+        right: 150px
+    }
+}
+
+@media(min-width: 1471px) {
+    .navbar-brand>img {
+        left: 55px;
+        position: relative;
+    }
+
+    .navbar-nav ul {
+        position: relative;
+        right: 150px;
+        top: 20px;
+    }
+
+    .navbar-nav>li {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .submenu-links {
+        font-size: 16px;
+    }
+
+    .header .search .fulltext-search-box {
+        position: relative;
+        right: 130px;
+        top: 20px;
+        width: 140%;
+    }
+
+    .header .search .btn-buscar {
+        width: 75%;
+        line-height: 20px !important;
+        position: relative;
+        right: 1px;
+        bottom: 14px;
+    }
+
+    .header .search {
+        right: 50px;
+    }
+
+    .header .mini-cart {
+        top: 30px;
+        right: 90px;
+    }
+}
+
+
+/**************Estilos del Buscador****************/
+
+.header .search .btn-buscar {
+    font-size: 12px !important;
+    line-height: 20px !important;
+    border: 1px solid green !important;
+    color: green;
+}
+
+.header .search .fulltext-search-box {
+    font-size: 12px !important;
+    margin-right: 0 !important;
+}
+
+.header .search {
+    margin-top: 10px;
+}
+
+/**************Estilos del Carrito****************/
+
+.header .mini-cart i {
+    color: gray;
+}
+
+.header .mini-cart span.badge {
+    background-color: green !important;
+    vertical-align: top;
+    position: absolute;
+    top: auto;
+    right: auto;
+}
+
+/**************Estilos del Menu****************/
+
+/*caracteristicas del submenu de categorias de productos*/
+.submenu-links {
+    margin-top: 10px;
+    color: black;
+    font-size: 12px;
+    opacity: .6;
+    font-weight: 400 !important;
+}
+
+/*caracteristicas de los link del menu nav bar*/
+.navbar-nav>li {
+    color: black;
+    text-decoration: none;
+    background: transparent;
+    font-weight: bolder !important;
+}
