@@ -1,0 +1,30 @@
+@media(max-width: 326) {
+    .titulo-institucional {
+        font-size: 25px !important;
+    }
+}
+
+.card {
+    border: 0 !important;
+}
+
+.card-header {
+    background-color: white !important;
+}
+
+.card-header a:link,
+a:visited,
+a:hover,
+a:active {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.card-header a:hover{
+    font-weight: bold;
+}
+
+#accordion {
+    position: relative;
+    right: 10px
+}

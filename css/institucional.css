@@ -1,3 +1,18 @@
+@media (max-width: 457px){
+    .titulo-institucional{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1471px) {
+    #institucional-content {
+        max-width: 1440px;
+    }
+}
+
+/** ************************************************************************************ **/
+/** *********** INSTITUCIONAL **/
+/** ************************************************************************************ **/
 #institucional-extra-top {
     height: 40px;
 }
@@ -10,19 +25,10 @@
     height: 10px;
 }
 
-.list-inline{
+.list-inline {
     margin-left: 0 !important;
 }
 
-@media (min-width: 1560px) {
-    .container {
-        max-width: 1440px;
-    }
-}
-
-/** ************************************************************************************ **/
-/** *********** INSTITUCIONAL **/
-/** ************************************************************************************ **/
 #institucional-content {
     margin-bottom: 55px;
 }

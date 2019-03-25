@@ -1,5 +1,6 @@
 /* Extra small devices (portrait pones, less than 576px)*/
-@media (max-width: 320px) {
+
+@media (max-width: 385px) {
     .header .mini-cart span.badge {
         top: -5px;
         right: 5px;
@@ -7,12 +8,21 @@
 
     .navbar-toggler {
         position: relative;
-        right: 40px;
+        right: 50px;
+    }
+
+    .logo-position {
+        position: relative;
+        left: 50px;
     }
 
     .navbar-nav>li {
         margin-right: 20px;
         font-size: 14px;
+    }
+
+    .submenu-links {
+        font-size: 13px;
     }
 }
 
@@ -52,9 +62,19 @@
     button[aria-expanded="true"] {
         right: 100px;
     }
+
+    .navbar-nav>li {
+        margin-right: 20px;
+        font-size: 14px;
+    }
+
+    .submenu-links {
+        font-size: 13px;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up)*/
+
 @media (min-width: 576px) and (max-width: 767.98px) {
     .header .mini-cart {
         position: relative;
@@ -86,9 +106,10 @@
 }
 
 /* Medium devices (tablets, 768px and up)*/
+
 @media (min-width: 768px) and (max-width: 991.98px) {
     .navbar-nav>li {
-        margin-right: 0;
+        margin-right: 10px;
         font-size: 13px;
     }
 
@@ -112,15 +133,17 @@
 
     .header .search {
         margin-top: 20px !important;
+        right: 10px;
     }
 
     .header .mini-cart {
         top: 20px;
+        right: 20px;
     }
-
 }
 
 /* Large devices (desktops, 992px and up)*/
+
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .navbar-nav>li {
         margin-right: 20px;
@@ -135,7 +158,8 @@
 
     .header .search .btn-buscar {
         position: relative;
-        left: 12px;
+        width: 50px;
+        left: 5px;
         bottom: 34px;
         line-height: 20px !important;
     }
@@ -146,6 +170,7 @@
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
+
 @media (min-width: 1200px) and (max-width: 1470px) {
     .navbar-expand-md .navbar-collapse {
         position: relative;
@@ -184,7 +209,7 @@
         font-size: 16px;
     }
 
-    .navbar-nav ul {
+    .menu-position {
         position: relative;
         right: 150px
     }
@@ -196,10 +221,10 @@
         position: relative;
     }
 
-    .navbar-nav ul {
+    .menu-position {
         position: relative;
-        right: 150px;
-        top: 20px;
+        right: 150px !important;
+        top: 20px !important;
     }
 
     .navbar-nav>li {
@@ -232,10 +257,9 @@
 
     .header .mini-cart {
         top: 30px;
-        right: 90px;
+        right: 110px;
     }
 }
-
 
 /**************Estilos del Buscador****************/
 
@@ -272,15 +296,16 @@
 /**************Estilos del Menu****************/
 
 /*caracteristicas del submenu de categorias de productos*/
+
 .submenu-links {
     margin-top: 10px;
     color: black;
-    font-size: 12px;
     opacity: .6;
     font-weight: 400 !important;
 }
 
 /*caracteristicas de los link del menu nav bar*/
+
 .navbar-nav>li {
     color: black;
     text-decoration: none;
