@@ -12,19 +12,19 @@
     background-color: white !important;
 }
 
-.card-header a:link,
-a:visited,
-a:hover,
-a:active {
+.pregunta-style:link,
+.pregunta-style:visited,
+.pregunta-style:hover,
+.pregunta-style:active {
     color: black !important;
     text-decoration: none !important;
 }
 
-.card-header a:hover{
+.pregunta-style:hover {
     font-weight: bold;
 }
 
 #accordion {
     position: relative;
-    right: 10px
+    right: 10px;
 }

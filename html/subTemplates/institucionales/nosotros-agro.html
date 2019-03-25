@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
+
+<head>
+    <title> Demo Agro</title>
+    <vtex:metaTags />
+    <vtex:template id="commonStylesAgro" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/arquivos/logo-agro.png" />
+
+    <script>
+        console.log('9jj')
+    </script>
+
+</head>
+
+<body id="home-page">
+    <div class="page">
+        <div id="home-extra-top">
+        </div>
+
+        <header>
+            <div class="header">
+                <!--  SubTemplate: cuenta-header -->
+                <vtex:template id="cuenta-header-agro" />
+                <!-- /SubTemplate: cuenta-header -->
+
+                <!--  SubTemplate: menu-header -->
+                <!--<vtex:template id="menu-header-agro" />-->
+                <vtex:template id="menu-search-header-agro" />
+                <!-- /SubTemplate: menu-header -->
+            </div>
+        </header>
+
+
+        <div id="institucional-extra-top"></div>
+
+        <section id="institucional-content" class="container">
+
+            <div id="box-bread-brumb" class="hidden-xs list-inline">
+                <a href="https://demoagro.myvtex.com/">INICIO</a> /
+                <span>SOBRE COMPAÑIA</span>
+            </div>
+
+            <div id="institucional-extra-middle"></div>
+
+            <div class="conteudo-institucional">
+                <vtex:contentPlaceHolder id="sobre-compañia" />
+            </div>
+
+        </section><!-- #content -->
+
+        <div id="institucional-extra-bottom"></div>
+
+        <!--  SubTemplate: Footer -->
+        <vtex:template id="footer-agro" />
+        <!-- /SubTemplate: Footer -->
+
+    </div><!-- .container-fluid -->
+</body>
+
+<vtex:template id="commonScriptsAgro" />
+
+</html>

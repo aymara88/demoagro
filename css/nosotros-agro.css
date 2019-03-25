@@ -1,0 +1,15 @@
+.conteudo-institucional h4 {
+    margin-top: 20px;
+}
+
+@media(min-width: 1471px) {
+    #img-nosotros {
+        max-width: 120%;
+        position: relative;
+        left: 70px;
+    }
+
+    .col-xl-8 {
+        max-width: 50%;
+    }
+}
