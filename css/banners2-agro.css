@@ -1,0 +1,143 @@
+@media(max-width: 767px) {
+
+    .texto-2banner1,
+    .texto-2banner2,
+    .texto-2banner3 {
+        top: 120px;
+        left: 50px;
+    }
+
+    #boton-2banner1,
+    #boton-2banner2,
+    #boton-2banner3 {
+        top: 160px;
+        left: 35px;
+    }
+
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    .texto-2banner1 {
+        top: 100px;
+        left: 60px;
+    }
+
+    .texto-2banner2 {
+        top: 100px;
+        left: 80px;
+    }
+
+    .texto-2banner3 {
+        top: 120px;
+        left: 450px;
+    }
+
+    #boton-2banner1,
+    #boton-2banner2 {
+        top: 150px;
+        left: 100px;
+    }
+
+    #boton-2banner3 {
+        left: 540px;
+        top: 170px;
+    }
+}
+
+@media(min-width: 992px) and (max-width: 1199px) {
+
+    .texto-2banner1 {
+        width: 140px;
+        top: 50px;
+        left: 40px;
+    }
+
+    .texto-2banner2 {
+        width: 140px;
+        top: 120px;
+        left: 270px;
+    }
+
+    .texto-2banner3 {
+        width: 120px;
+        top: 120px;
+        left: 700px;
+    }
+
+    #boton-2banner1,
+    #boton-2banner2 {
+        top: 200px;
+        left: 280px;
+    }
+
+    #boton-2banner3 {
+        left: 705px;
+        top: 200px;
+    }
+}
+
+@media(min-width: 1200px) {
+
+    /***********Botones*************/
+    #boton-2banner1,
+    #boton-2banner2 {
+        top: 220px;
+        left: 390px;
+    }
+
+    #boton-2banner3 {
+        left: 910px;
+        top: 210px;
+    }
+
+    /***********Textos*************/
+    .texto-2banner1 {
+        top: 90px;
+        left: 50px;
+        width: 200px
+    }
+
+    .texto-2banner2 {
+        top: 150px;
+        left: 400px;
+        width: 100px;
+    }
+
+    .texto-2banner3 {
+        top: 110px;
+        left: 920px;
+        width: 120px;
+    }
+}
+
+/** ************************************************************************************ **/
+/** *********** BANNERS **/
+/** ************************************************************************************ **/
+.fullbanner {
+    display: block;
+}
+
+.fullbanner .box-banner a {
+    display: block;
+}
+
+.fullbanner .box-banner img {
+    height: auto ! important;
+    width: auto ! important;
+}
+
+.texto-2banner1,
+.texto-2banner2,
+.texto-2banner3 {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+#boton-2banner1,
+#boton-2banner2,
+#boton-2banner3 {
+    color: white !important;
+    height: 30px;
+}

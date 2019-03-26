@@ -192,10 +192,15 @@ a.productImage {
     right: -25px;
 }
 
-.price{
+.price {
     display: block;
 }
 
-.price .best-price{
+.price .best-price {
     display: block;
+    text-decoration: none;
+}
+
+.price .old-price {
+    text-decoration: line-through;
 }

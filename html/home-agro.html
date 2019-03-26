@@ -59,8 +59,6 @@
 
 
         <!--  placeHolder: ultimos-agro -->
-
-        <!-- lo más vendido -->
         <section class="container-fluid bg-padding" style="margin-top: 45px">
             <div class="container lo-mas-vendido">
                 <div id="lomasnuevo"></div>
@@ -79,8 +77,25 @@
                 </div>
             </div>
         </section>
-
         <!--  placeHolder: ultimos-agro -->
+
+        <!--  placeHolder: banners2 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6" id="2banner1">
+                    <vtex:contentPlaceHolder id="banner1-left" />
+                </div>
+                <div class="col-sm-12 col-md-6" id="2banner2">
+                    <vtex:contentPlaceHolder id="banner2-right" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12" id="2banner3">
+                    <vtex:contentPlaceHolder id="banner3-center" />
+                </div>
+            </div>
+        </div>
+        <!-- /placeHolder: banners2 -->
 
         <!--  SubTemplate: Footer -->
         <vtex:template id="footer-agro" />
