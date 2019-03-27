@@ -1,0 +1,80 @@
+ <!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+     xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
+
+ <head>
+     <title> Demo Agro</title>
+     <vtex:metaTags />
+     <vtex:template id="commonStylesAgro" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="shortcut icon" href="/arquivos/logo-agro.png" />
+
+     <script>
+         console.log('lov')
+     </script>
+
+ </head>
+
+ <body id="account-page">
+
+     <div class="page">
+
+         <div id="home-extra-top">
+         </div>
+
+         <header>
+             <div class="header">
+                 <!--  SubTemplate: cuenta-header -->
+                 <vtex:template id="cuenta-header-agro" />
+                 <!-- /SubTemplate: cuenta-header -->
+
+                 <!--  SubTemplate: menu-header -->
+                 <!--<vtex:template id="menu-header-agro" />-->
+                 <vtex:template id="menu-search-header-agro" />
+                 <!-- /SubTemplate: menu-header -->
+             </div>
+         </header>
+
+         <div id="account-extra-top"></div>
+
+         <section id="account-content" class="container">
+
+             <div class="row">
+
+                 <div class="col-xs-12 col-sm-6">
+                     <vtex.cmc:accountUserProfile />
+                 </div>
+                 <div class="col-xs-12 col-sm-6">
+                     <vtex.cmc:accountAddress />
+                 </div>
+
+             </div>
+
+         </section><!-- #content -->
+
+         <div id="account-extra-bottom"></div>
+
+         <!--  SubTemplate: Footer -->
+         <vtex:template id="footer-agro" />
+         <!-- /SubTemplate: Footer -->
+
+     </div><!-- .container-fluid -->
+
+ </body>
+ <vtex:template id="commonScriptsAgro" />
+
+ <script type="text/javascript">
+     $(document).ready(function () {
+         var hash = $(location).attr('hash');
+         var $links = $('a[data-toggle="modal"]');
+
+         $.each($links, function () {
+             var $this = $(this);
+             if ($this.attr('href') === hash) {
+                 $this.click();
+             }
+         });
+     })
+ </script>
+
+ </html>

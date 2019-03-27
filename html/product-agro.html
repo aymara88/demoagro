@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
     xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
@@ -10,10 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/arquivos/logo-agro.png" />
 
-    <script src="/arquivos/main.js"></script>
-
     <script>
-        console.log('1psdk')
+        console.log('lov')
     </script>
 
 </head>
@@ -22,13 +19,21 @@
 
     <div class="page">
 
-        <!--  SubTemplate: cuenta-header -->
-        <vtex:template id="cuenta-header-agro" />
-        <!-- /SubTemplate: cuenta-header -->
+        <div id="home-extra-top">
+        </div>
 
-        <!--  SubTemplate: menu-header -->
-        <vtex:template id="menu-header-agro" />
-        <!-- /SubTemplate: menu-header -->
+        <header>
+            <div class="header">
+                <!--  SubTemplate: cuenta-header -->
+                <vtex:template id="cuenta-header-agro" />
+                <!-- /SubTemplate: cuenta-header -->
+
+                <!--  SubTemplate: menu-header -->
+                <!--<vtex:template id="menu-header-agro" />-->
+                <vtex:template id="menu-search-header-agro" />
+                <!-- /SubTemplate: menu-header -->
+            </div>
+        </header>
 
         <div id="product-extra-top"></div>
 
@@ -137,9 +142,9 @@
             <div class="product-description">
 
                 <div class="btn-group hidden-xs" role="group" aria-label="menu-anchor">
-                    <a href="#description" class="btn btn-default">Descrição do Produto</a>
-                    <a href="#specification" class="btn btn-default">Especificações do Produto</a>
-                    <a href="#reviews" class="btn btn-default">Avaliações</a>
+                    <a href="#description" class="btn btn-default">Descripción del Producto</a>
+                    <a href="#specification" class="btn btn-default">Especificaciones del Producto</a>
+                    <a href="#reviews" class="btn btn-default">Disponibilidad</a>
                 </div>
 
 
@@ -154,7 +159,7 @@
 
                 <div class="product-description-box">
                     <div id="description">
-                        <h2 class="title">Descrição do Produto</h2>
+                        <h2 class="title">Descripción del Producto</h2>
                         <!--  Component: Description -->
                         <vtex.cmc:ProductDescription />
                     </div><!-- .description -->
@@ -234,6 +239,7 @@
     </div><!-- .container-fluid -->
 
 </body>
+
 <vtex:template id="commonScriptsAgro" />
 
 </html>

@@ -1,0 +1,35 @@
+.container.container-contact2 {
+    margin-top: 10% !important;
+}
+.form-group {
+    margin-bottom: 20px !important;
+}
+#nameContact::placeholder { 
+    font-size: 14px; 
+}
+input#nameContact{
+    border-color:green;
+    border-radius: 0px
+}
+#emailContact::placeholder { 
+    font-size: 14px; 
+}
+#affairContact::placeholder { 
+    font-size: 14px; 
+}
+input#emailContact{
+    border-color:green;
+    border-radius: 0px
+}
+input#affairContact{
+    border-color:green;
+    border-radius: 0px
+}
+textarea#messageContact{
+    border-color: green;
+    height: 225px;
+    resize: none !important;
+    overflow-x: hidden !important;
+    white-space: normal !important;
+    width: 100% !important;
+}
