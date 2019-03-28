@@ -1,35 +1,85 @@
+@media(max-width: 991px) {
+    textarea#messageContact {
+        width: 100% !important;
+    }
+}
+
+@media(min-width: 992px) and (max-width: 1470px) {
+
+    textarea#messageContact {
+        width: 108.5% !important;
+        position: inherit;
+        right: 15px;
+    }
+}
+
+@media(min-width: 1471px) {
+    #box-bread-brumb {
+        position: relative;
+        left: 135px;
+    }
+
+    textarea#messageContact {
+        width: 107% !important;
+        position: inherit;
+        right: 15px;
+    }
+}
+
+.container .container {
+    margin: auto !important;
+}
+
 .container.container-contact2 {
     margin-top: 10% !important;
 }
+
 .form-group {
     margin-bottom: 20px !important;
 }
-#nameContact::placeholder { 
-    font-size: 14px; 
+
+#nameContact::placeholder {
+    font-size: 14px;
 }
-input#nameContact{
-    border-color:green;
-    border-radius: 0px
-}
-#emailContact::placeholder { 
-    font-size: 14px; 
-}
-#affairContact::placeholder { 
-    font-size: 14px; 
-}
-input#emailContact{
-    border-color:green;
-    border-radius: 0px
-}
-input#affairContact{
-    border-color:green;
-    border-radius: 0px
-}
-textarea#messageContact{
+
+input#nameContact {
     border-color: green;
+    border-radius: 0;
+}
+
+#emailContact::placeholder {
+    font-size: 14px;
+}
+
+input#emailContact {
+    border-color: green;
+    border-radius: 0;
+}
+
+#affairContact::placeholder {
+    font-size: 14px;
+}
+
+input#affairContact {
+    border-color: green;
+    border-radius: 0;
+}
+
+textarea#messageContact {
+    border-color: green;
+    border-radius: 0;
     height: 225px;
     resize: none !important;
     overflow-x: hidden !important;
     white-space: normal !important;
-    width: 100% !important;
+}
+
+.boton-contacto {
+    background-color: green !important;
+    border: 1px solid green !important;
+    font-size: 13px !important;
+    border-radius: 0 !important;
+    color: white !important;
+    width: 120px;
+    height: 40px;
 }
