@@ -96,12 +96,45 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td align="left">
-                                                                    <a href="http://demoagro.myvtex.com"><img
-                                                                            height="55px" border="0" width="auto"
+                                                                    <a href="http://demoagro.myvtex.com">
+                                                                        <img height="100px" border="0" width="auto"
                                                                             style="border:none;border-left:0px;border-right:0px;"
                                                                             alt="{{_accountInfo.TradingName}}"
-                                                                            src="'https://demoagro.vteximg.com.br/arquivos/logo-agro.png"
+                                                                            src="https://demoagro.vteximg.com.br/arquivos/logo-agro.png"
                                                                             class="img-logo"></a>
+                                                                </td>
+                                                                <td align="right">
+                                                                    <table width="100%" cellspacing="0" cellpadding="0"
+                                                                        border="0" align="left"
+                                                                        style="padding-bottom: 10px;border:none;border-left:0px;border-right:0px;"
+                                                                        class="col-3">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <a href="#"
+                                                                                    style=' text-decoration:none; cursor: pointer'>
+                                                                                    <img src='https://demoagro.vteximg.com.br/arquivos/facebook-agro.png'
+                                                                                        alt='facebook' title='Facebook'
+                                                                                        width="20">
+                                                                                </a>
+                                                                            </td>
+                                                                            <td>
+                                                                                <a href="#"
+                                                                                    style=' text-decoration:none; cursor: pointer'>
+                                                                                    <img src='https://demoagro.vteximg.com.br/arquivos/pinterest-agro.png'
+                                                                                        alt='pinterest'
+                                                                                        title='Pinterest' width="30">
+                                                                                </a>
+                                                                            </td>
+                                                                            <td>
+                                                                                <a href="#"
+                                                                                    style='text-decoration:none; cursor: pointer'>
+                                                                                    <img src='https://demoagro.vteximg.com.br/arquivos/instagram-agro.png'
+                                                                                        alt='instagram'
+                                                                                        title='Instagram' width="45">
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -118,48 +151,23 @@
                                                             <tr>
                                                                 <td align="left">
                                                                     <br />
-                                                                    <p>Hello, <strong>{{to.0.name}}</strong>.</p>
-                                                                    <p>We need your confirmation to grant access to the
-                                                                        page you are trying to view.</p>
-                                                                    <p>Return to the page and use the token below to
-                                                                        login:</p>
-                                                                    <div
-                                                                        style='background: #e1f3c3; color: green;text-align:center;font-size:42px;padding:20px;'>
-                                                                        <strong>{{aditionalData.accessKey}}</strong>
-                                                                    </div>
-                                                                    <br />
-                                                                    <p>
-
-                                                                    </p>
-                                                                    <br />
-                                                                </td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <strong>Thank you,</strong><br>
-                                                                    <strong>{{_accountInfo.TradingName}}
-                                                                        team</strong>.<br><br>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td align="left">
-                                                                    <br />
                                                                     <p>Hola, <strong>{{to.0.name}}</strong>.</p>
-                                                                    <p>Necesitamos de su confirmación para garantizar el
-                                                                        acceso a la página que usted esta intentando
-                                                                        visualizar.</p>
+                                                                    <p>Necesitamos su confirmación para liberar la
+                                                                        página que está tratando de acceder.</p>
                                                                     <p>Retorne a la página y digite el siquiente código
                                                                         para acceder:
                                                                     </p>
-                                                                    <div
-                                                                        style='background: #e1f3c3; color: green;text-align:center;font-size:42px;padding:20px;'>
-                                                                        <strong>{{aditionalData.accessKey}}</strong>
-                                                                    </div>
-                                                                    <br />
-                                                                    <p>
 
+                                                                    <div
+                                                                        style="border: 1px solid gray; background: white; padding: 10px;">
+                                                                        <div
+                                                                            style='background: #5b8517dc;  color:white;text-align:center;font-size:42px;padding:20px;'>
+                                                                            <strong>{{aditionalData.accessKey}}</strong>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <br />
+                                                                    <p>Este es un procedimiento 100% seguro.
                                                                     </p>
                                                                     <br />
                                                                 </td>
@@ -167,7 +175,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td>
-                                                                    <strong>Gracias,</strong><br>
+                                                                    <strong>Atentamente,</strong><br>
                                                                     <strong>Equipo
                                                                         {{_accountInfo.TradingName}}</strong>.<br><br>
                                                                 </td>
@@ -182,6 +190,96 @@
                                 </td>
                             </tr>
                         </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src='https://demoagro.vteximg.com.br/arquivos/img.png' alt='footer-img' title='footer-img'
+                        style="position:relative; top: 0px; max-width:100%"></td>
+            </tr>
+            <tr style="background: rgba(238, 236, 236, 0.593);">
+                <td style='padding:100px 0px;'>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td width="260" valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" align='center'>
+                                    <tr>
+                                        <td align='center'
+                                            style='padding: 25px 0 0 0; color: #202020; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
+                                            <a href="https://demoagro.myvtex.com/institucional/aviso-privacidad"
+                                                style=' text-decoration:none; cursor: pointer; color:#202020'>
+                                                Aviso de privacidad
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align='center'
+                                            style="padding: 25px 0 0 0; color: #202020; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
+                                            <a href="https://demoagro.myvtex.com/institucional/terminos-condiciones"
+                                                style=' text-decoration:none; cursor: pointer; color:#202020'>
+                                                Términos y condiciones
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="260" valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" align='center'>
+                                    <tr>
+                                        <td align='center'
+                                            style='padding: 25px 0 0 0; color: #202020; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
+                                            <a href="https://demoagro.myvtex.com/contacto"
+                                                style=' text-decoration:none; cursor: pointer; color:#202020'>
+                                                Contacto
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align='center'
+                                            style="padding: 25px 0 0 0; color: #202020; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
+                                            <a href="#" style=' text-decoration:none; cursor: pointer; color:#202020'>
+                                                Condiciones de entrega
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="260" valign="top">
+                                <table align='center'
+                                    style='padding: 25px 0 0 0; color: #202020; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
+                                    <tr>
+                                        <td style='color: #202020;' align='center'>
+                                            <a href="https://demoagro.myvtex.com/institucional/politicas-garantias"
+                                                style=' text-decoration:none; cursor: pointer; color:#202020'>
+                                                Política de datos
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align='center'
+                                            style="padding: 25px 0 0 0; color: #202020; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
+                                            <a href="https://demoagro.myvtex.com/institucional/politicas-garantias"
+                                                style=' text-decoration:none; cursor: pointer; color:#202020'>
+                                                Política de privacidad
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr style="background: rgba(238, 236, 236, 0.593);">
+                <td style="padding: 30px 30px 30px 30px;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td style="color: #202020d2; font-family: Arial, sans-serif; font-size: 14px;"
+                                align='center' width="100%">
+                                Green Food © 2018. by Todos los derechos reservados.
+                            </td>
+                        </tr>
                     </table>
                 </td>
             </tr>
