@@ -21,22 +21,28 @@
                 <div class="col-sm-12 social-media-position">
                     <b>Redes Sociales</b>
                     <ul class="list-inline">
-                        <li><a href="#" target="_Blank" class="twitter"><span class="social-media-ico-size social-media-ico-color"><i
+                        <li><a href="#" target="_Blank" class="twitter"><span
+                                    class="social-media-ico-size social-media-ico-color"><i
                                         class="fab fa-twitter"></i></span></a></li>
-                        <li><a href="#" target="_Blank" class="facebook"><span class="social-media-ico-size social-media-ico-color"><i
+                        <li><a href="#" target="_Blank" class="facebook"><span
+                                    class="social-media-ico-size social-media-ico-color"><i
                                         class="fab fa-facebook-f"></i></span></a></li>
-                        <li><a href="#" target="_Blank" class="youtube"><span class="social-media-ico-size social-media-ico-color"><i
+                        <li><a href="#" target="_Blank" class="youtube"><span
+                                    class="social-media-ico-size social-media-ico-color"><i
                                         class="fab fa-youtube"></i></span></a></li>
-                        <li><a href="#" target="_Blank" class="gplus"><span class="social-media-ico-size social-media-ico-color"><i
+                        <li><a href="#" target="_Blank" class="gplus"><span
+                                    class="social-media-ico-size social-media-ico-color"><i
                                         class="fab fa-google-plus-g"></i></span></a></li>
                     </ul>
                 </div>
                 <div class="col-sm-12 social-media-position">
                     <b>Métodos de pago</b>
                     <div class="pago-img">
-                        <a href="#"><img class="resize-img" src="/arquivos/payment_paypal.png" alt="Paypal" title="Visa, MarsterCard, American Express or Skrill" /></a>
+                        <a href="#"><img class="resize-img" src="/arquivos/payment_paypal.png" alt="Paypal"
+                                title="Visa, MarsterCard, American Express or Skrill" /></a>
                         <a href="#"><img src="/arquivos/payment_visa.png" alt="Visa" title="Visa" /></a>
-                        <a href="#"><img src="/arquivos/payment_express.png" alt="American Express" title="American Express" /></a>
+                        <a href="#"><img src="/arquivos/payment_express.png" alt="American Express"
+                                title="American Express" /></a>
                         <a href="#"><img src="/arquivos/Skrill.png" alt="Skrill" title="Skrill" /></a>
                     </div>
                 </div>
@@ -48,13 +54,19 @@
                     Disfruta de las novedades en alimentación y nuevos productos que Green Food te ofrece.
                 </span>
                 <div class="space-suscripcion"></div>
-                <form>
+
+                <!--Form Original boletin.js-->
+                <form action="" method="post" name="frmNew" id="frmNewModal">
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Ingresa tu correo electrónico" />
+                        <input required="required" type="email" class="form-control" aria-describedby="emailHelp"
+                            placeholder="Ingresa tu correo electrónico" name="emailModal" id="emailModal" />
+                        <input type="hidden" name="isNewsletterOptInModal" id="isNewsletterOptInModal" value="true" />
                     </div>
-                    <button type="submit" class="btnSubmit" id="btnFooter">Submit</button>
+                    <p class="font-size-13" id="mensajeModal"></p>
+                    <button onclick="return suscripcionBoletin();" type="submit" name="enviarFrm"
+                        class="btnSubmit" id="enviarFrm">Suscríbete</button>
                 </form>
+                            
                 <div class="space-suscripcion"></div>
             </div>
         </div>

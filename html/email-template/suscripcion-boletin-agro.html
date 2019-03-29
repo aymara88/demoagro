@@ -1,0 +1,287 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <!-- So that mobile webkit will display zoomed in -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- disable auto telephone linking in iOS -->
+    <title>{{_accountInfo.TradingName}}</title>
+    <style type="text/css">
+        body {
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+        }
+
+        body {
+            padding: 0;
+        }
+
+        table td {
+            border-collapse: collapse;
+        }
+
+        .yshortcuts a {
+            border-bottom: none !important;
+        }
+
+        /* Constrain email width for small screens */
+        @media screen and (max-width: 600px) {
+            table[class="container"] {
+                width: 100% !important;
+            }
+        }
+
+        /* Styles for forcing columns to rows */
+        @media only screen and (max-width : 600px) {
+
+            /* force container columns to (horizontal) blocks */
+            .container {
+                border-radius: 0 !important;
+            }
+
+            .no-padding-top-bottom-mobile {
+                padding-top: 0;
+                padding-bottom: 0;
+                padding: 0 !important;
+            }
+
+            .side-border td {
+                padding-left: 0;
+            }
+
+            td[class="force-col"] {
+                display: block;
+                padding-right: 0 !important;
+            }
+
+            table[class="col-3"] {
+                /* unset table align="left/right" */
+                float: none !important;
+                width: 100% !important;
+                /* change left/right padding and margins to top/bottom ones */
+                padding-bottom: 12px;
+                border-bottom: 1px solid #eee;
+            }
+
+        }
+    </style>
+</head>
+
+<body marginwidth="0" marginheight="0" bgcolor="#fff" style="padding:0px 0px;color:#333;" leftmargin="0" topmargin="0"
+    class="versao-desktop">
+    <!-- 100% wrapper (grey background) -->
+    <table width="100%" cellspacing="0" border="0" bgcolor="#fff">
+        <tbody>
+            <tr>
+                <td valign="top" bgcolor="#fff" align="center" class="no-padding-top-bottom-mobile"
+                    style="background-color: #fff;color:#333;">
+                    <!-- 600px container (white background) -->
+                    <table cellspacing="0" cellpadding="0" border="0" bgcolor="#fff" class="container"
+                        style="max-width:800px;">
+                        <tbody>
+                            <tr>
+                                <td bgcolor="#ffffff" align="left" class="container-padding"
+                                    style="background-color: #ffffff; padding-left: 10px; padding-right: 3px; font-size: 13px; line-height: 19px; font-family: Helvetica, sans-serif; color: #333;">
+                                    <br>
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0"
+                                        class="columns-container">
+                                        <tbody>
+                                            <tr>
+                                                <td class="force-col" style="padding-right: 20px;">
+                                                    <table width="100%" cellspacing="0" cellpadding="0" border="0"
+                                                        align="left"
+                                                        style="padding-bottom: 10px;border:none;border-left:0px;border-right:0px;"
+                                                        class="col-3">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="left">
+                                                                    <a href="http://demoagro.myvtex.com">
+                                                                        <img height="100px" border="0" width="auto"
+                                                                            style="border:none;border-left:0px;border-right:0px;"
+                                                                            alt="{{_accountInfo.TradingName}}"
+                                                                            src="https://demoagro.vteximg.com.br/arquivos/logo-agro.png"
+                                                                            class="img-logo"></a>
+                                                                </td>
+                                                                <td align="right">
+                                                                    <table width="100%" cellspacing="0" cellpadding="0"
+                                                                        border="0" align="left"
+                                                                        style="padding-bottom: 10px;border:none;border-left:0px;border-right:0px;"
+                                                                        class="col-3">
+                                                                        <tbody>
+                                                                            <tr align="right">
+                                                                                <td width="0">
+                                                                                    <a href="#"
+                                                                                        style=" text-decoration:none; cursor: pointer">
+                                                                                        <img src="https://demoagro.vteximg.com.br/arquivos/facebook-agro.png"
+                                                                                            alt="facebook"
+                                                                                            title="Facebook" width="15">
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td width="50">
+                                                                                    <a href="#"
+                                                                                        style=" text-decoration:none; cursor: pointer">
+                                                                                        <img src="https://demoagro.vteximg.com.br/arquivos/pinterest-agro.png"
+                                                                                            alt="pinterest"
+                                                                                            title="Pinterest"
+                                                                                            width="22">
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td width="50">
+                                                                                    <a href="#"
+                                                                                        style="text-decoration:none; cursor: pointer">
+                                                                                        <img src="https://demoagro.vteximg.com.br/arquivos/instagram-agro.png"
+                                                                                            alt="instagram"
+                                                                                            title="Instagram"
+                                                                                            width="35">
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="force-col">
+                                                    <!-- ### BEGIN CONTENT ### -->
+                                                    <table width="100%" cellspacing="0" cellpadding="0" border="0"
+                                                        bgcolor="#ffffff" align="left"
+                                                        style="padding-bottom:0;margin-bottom:0;" class="col-3">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="left">
+                                                                    <br>
+                                                                    <p><strong>{!firstName}</strong></p>
+                                                                    <p><strong>{!email}</strong></p>
+                                                                    <p>Ya formas parte de la familia de Green Food,
+                                                                        donde de ahora en adelante recibirás nuestro
+                                                                        boletín con noticias, novedades y promociones.
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <img src="https://demoagro.vteximg.com.br/arquivos/img.png" alt="footer-img" title="footer-img"
+                        style="position:relative; top: 10px; max-width:100%"></td>
+            </tr>
+            <tr style="background: rgba(238, 236, 236, 0.593);">
+                <td style="padding:100px 0px;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td width="260" valign="top">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" align="center">
+                                        <tbody>
+                                            <tr>
+                                                <td align="center"
+                                                    style="padding: 25px 0 0 0; color: #202020; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
+                                                    <a href="https://demoagro.myvtex.com/institucional/aviso-privacidad"
+                                                        style=" text-decoration:none; cursor: pointer; color:#202020">
+                                                        Aviso de privacidad
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"
+                                                    style="padding: 25px 0 0 0; color: #202020; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
+                                                    <a href="https://demoagro.myvtex.com/institucional/terminos-condiciones"
+                                                        style=" text-decoration:none; cursor: pointer; color:#202020">
+                                                        Términos y condiciones
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td width="260" valign="top">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" align="center">
+                                        <tbody>
+                                            <tr>
+                                                <td align="center"
+                                                    style="padding: 25px 0 0 0; color: #202020; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
+                                                    <a href="https://demoagro.myvtex.com/contacto"
+                                                        style=" text-decoration:none; cursor: pointer; color:#202020">
+                                                        Contacto
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"
+                                                    style="padding: 25px 0 0 0; color: #202020; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
+                                                    <a href="#"
+                                                        style=" text-decoration:none; cursor: pointer; color:#202020">
+                                                        Condiciones de entrega
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td width="260" valign="top">
+                                    <table align="center"
+                                        style="padding: 25px 0 0 0; color: #202020; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="color: #202020;" align="center">
+                                                    <a href="https://demoagro.myvtex.com/institucional/politicas-garantias"
+                                                        style=" text-decoration:none; cursor: pointer; color:#202020">
+                                                        Política de datos
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"
+                                                    style="padding: 25px 0 0 0; color: #202020; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
+                                                    <a href="https://demoagro.myvtex.com/institucional/politicas-garantias"
+                                                        style=" text-decoration:none; cursor: pointer; color:#202020">
+                                                        Política de privacidad
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr style="background: rgba(238, 236, 236, 0.593);">
+                <td style="padding: 30px 30px 30px 30px;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td style="color: #202020d2; font-family: Arial, sans-serif; font-size: 14px;"
+                                    align="center" width="100%">
+                                    Green Food © 2018. by Todos los derechos reservados.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!--/600px container -->
+    <!--/100% wrapper-->
+
+
+</body>
+
+</html>

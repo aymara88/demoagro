@@ -206,13 +206,6 @@
     color: white;
 }
 
-#btnFooter {
-    display: flex;
-    align-items: center;
-    align-self: flex-end;
-    margin: 0 0 0 auto;
-}
-
 #footerImgTopBorder {
     position: relative;
     top: 22px;
