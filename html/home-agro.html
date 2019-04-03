@@ -9,10 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/arquivos/logo-agro.png" />
 
+    <link rel="stylesheet" type="text/css" href="/arquivos/bestselleragro.css" />
     <link rel="stylesheet" type="text/css" href="/arquivos/slick.css" />
     <link rel="stylesheet" type="text/css" href="/arquivos/slick-theme.css" />
     <script src="/arquivos/slick.min.js"></script>
     <script src="/arquivos/carrusel.js"></script>
+    <script src="/arquivos/bestseller.js"></script>
     <script src="/arquivos/main.js"></script>
 
     <script>
@@ -66,13 +68,10 @@
                 <div class="col-xs-12">
                     <h2 class="tit-secc-home titulo-style">Últimos productos</h2>
                 </div>
-                <div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
-                    <p></p>
-                </div>
 
                 <div class="col-xs-12">
                     <div class="LoMasVendido-home regular-block Carrusel">
-                        <vtex:contentPlaceHolder id="carrusel-masvendido" />
+                        <vtex:contentPlaceHolder id="carrusel-ultimos" />
                     </div><!-- .showcase-default -->
                 </div>
             </div>
@@ -96,6 +95,23 @@
             </div>
         </div>
         <!-- /placeHolder: banners2 -->
+
+
+        <!--  placeHolder: mas-vendidos-agro -->
+        <section class="container masvendidos">
+            <h1>Más vendidos</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <div id='cards-productos-mas-vendidos'></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  placeHolder: mas-vendidos-agro -->
+
 
         <!--  SubTemplate: Footer -->
         <vtex:template id="footer-agro" />

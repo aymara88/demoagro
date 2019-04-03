@@ -1,9 +1,12 @@
-/* Extra small devices (portrait pones, less than 576px)*/
-
-@media (max-width: 385px) {
+@media(max-width: 320px) {
     .header .mini-cart span.badge {
-        top: -5px;
         right: 5px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 385px) {
+    .header .mini-cart span.badge {
+        right: 15px;
     }
 
     .navbar-toggler {
@@ -27,6 +30,10 @@
 }
 
 @media (min-width: 386px) and (max-width: 575.98px) {
+    .header .mini-cart span.badge {
+        right: 20px;
+    }
+
     .form-inline {
         margin-top: 30px;
     }
@@ -76,6 +83,7 @@
 /* Small devices (landscape phones, 576px and up)*/
 
 @media (min-width: 576px) and (max-width: 767.98px) {
+
     .header .mini-cart {
         position: relative;
         left: 650px;
@@ -140,6 +148,10 @@
         top: 20px;
         right: 20px;
     }
+
+    .header .mini-cart span.badge {
+        right: -10px;
+    }
 }
 
 /* Large devices (desktops, 992px and up)*/
@@ -166,6 +178,10 @@
 
     .header .mini-cart {
         top: 10px;
+    }
+
+    .header .mini-cart span.badge {
+        right: 10px;
     }
 }
 
@@ -200,6 +216,10 @@
         top: 30px;
     }
 
+    .header .mini-cart span.badge {
+        right: 20px;
+    }
+
     .navbar-nav>li {
         font-size: 16px;
         margin-right: 20px;
@@ -215,7 +235,7 @@
     }
 }
 
-@media(min-width: 1471px) {
+@media(min-width: 1471px) and (max-width: 1599px){
     .navbar-brand>img {
         left: 55px;
         position: relative;
@@ -259,6 +279,60 @@
         top: 30px;
         right: 110px;
     }
+
+    .header .mini-cart span.badge {
+        right: 20px;
+    }
+}
+
+@media(min-width: 1600px) {
+    .navbar-brand>img {
+        left: 55px;
+        position: relative;
+    }
+
+    .menu-position {
+        position: relative;
+        right: 150px !important;
+        top: 20px !important;
+    }
+
+    .navbar-nav>li {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .submenu-links {
+        font-size: 16px;
+    }
+
+    .header .search .fulltext-search-box {
+        position: relative;
+        right: 130px;
+        top: 20px;
+        width: 140%;
+    }
+
+    .header .search .btn-buscar {
+        width: 75%;
+        line-height: 20px !important;
+        position: relative;
+        right: 1px;
+        bottom: 14px;
+    }
+
+    .header .search {
+        right: 50px;
+    }
+
+    .header .mini-cart {
+        top: 30px;
+        right: 110px;
+    }
+
+    .header .mini-cart span.badge {
+        right: 40px;
+    }
 }
 
 /**************Estilos del Buscador****************/
@@ -282,15 +356,20 @@
 /**************Estilos del Carrito****************/
 
 .header .mini-cart i {
-    color: gray;
+    color: rgb(173, 169, 169);
 }
 
 .header .mini-cart span.badge {
     background-color: green !important;
-    vertical-align: top;
     position: absolute;
-    top: auto;
-    right: auto;
+    padding: 5px;
+    border-radius: 50%;
+    top: 15px;
+}
+
+.fa-shopping-cart:before {
+    content: "\f290" !important;
+    font-size: 25px;
 }
 
 /**************Estilos del Menu****************/

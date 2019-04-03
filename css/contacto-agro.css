@@ -5,7 +5,6 @@
 }
 
 @media(min-width: 992px) and (max-width: 1470px) {
-
     textarea#messageContact {
         width: 108.5% !important;
         position: inherit;
@@ -13,10 +12,45 @@
     }
 }
 
-@media(min-width: 1471px) {
-    #box-bread-brumb {
-        position: relative;
-        left: 135px;
+@media(min-width: 1471px) and (max-width: 1510px) {
+    #box-bread-brumb-contacto {
+        left: 55px;
+    }
+
+    textarea#messageContact {
+        width: 107% !important;
+        position: inherit;
+        right: 15px;
+    }
+}
+
+@media(min-width: 1511px) and (max-width: 1560px) {
+    #box-bread-brumb-contacto {
+        left: 50px;
+    }
+
+    textarea#messageContact {
+        width: 107% !important;
+        position: inherit;
+        right: 15px;
+    }
+}
+
+@media(min-width: 1561px) and (max-width: 1699px) {
+    #box-bread-brumb-contacto {
+        left: 150px;
+    }
+
+    textarea#messageContact {
+        width: 107% !important;
+        position: inherit;
+        right: 15px;
+    }
+}
+
+@media(min-width: 1700px) {
+    #box-bread-brumb-contacto {
+        left: 155px;
     }
 
     textarea#messageContact {
@@ -30,8 +64,8 @@
     margin: auto !important;
 }
 
-.container.container-contact2 {
-    margin-top: 10% !important;
+.row-centros-envios {
+    margin-top: 100px;
 }
 
 .form-group {
@@ -45,6 +79,7 @@
 input#nameContact {
     border-color: green;
     border-radius: 0;
+    font-size: 14px;
 }
 
 #emailContact::placeholder {
@@ -54,6 +89,7 @@ input#nameContact {
 input#emailContact {
     border-color: green;
     border-radius: 0;
+    font-size: 14px;
 }
 
 #affairContact::placeholder {
@@ -63,6 +99,7 @@ input#emailContact {
 input#affairContact {
     border-color: green;
     border-radius: 0;
+    font-size: 14px;
 }
 
 textarea#messageContact {
@@ -82,4 +119,23 @@ textarea#messageContact {
     color: white !important;
     width: 120px;
     height: 40px;
+}
+
+.contenido-title {
+    font-size: 22px;
+    font-weight: bolder;
+    margin-bottom: 50px;
+}
+
+#box-bread-brumb-contacto {
+    position: relative;
+    color: green;
+}
+
+#box-bread-brumb-contacto a {
+    color: green !important;
+}
+
+.dir-envio {
+    width: 65%;
 }
