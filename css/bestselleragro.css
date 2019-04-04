@@ -2,7 +2,45 @@
     margin-top: 20px;
 }
 
+.slick-dots{
+    display: none !important;
+}
+
 .productImg {
     width: 250px;
     height: 250px;
+}
+
+.laminas {
+    width: 250px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nameLamina {
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.laminas .actualPrice {
+    text-align: center;
+    color: darkgreen;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.laminas .productButton {
+    background-color: rgba(13, 112, 13, 0.829);
+    font-size: 13px;
+    color: #fff !important;
+    padding: 9px 12px;
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 0.1rem;
 }

@@ -13,10 +13,6 @@
 }
 
 @media(min-width: 1471px) and (max-width: 1510px) {
-    #box-bread-brumb-contacto {
-        left: 55px;
-    }
-
     textarea#messageContact {
         width: 107% !important;
         position: inherit;
@@ -25,10 +21,6 @@
 }
 
 @media(min-width: 1511px) and (max-width: 1560px) {
-    #box-bread-brumb-contacto {
-        left: 50px;
-    }
-
     textarea#messageContact {
         width: 107% !important;
         position: inherit;
@@ -37,10 +29,6 @@
 }
 
 @media(min-width: 1561px) and (max-width: 1699px) {
-    #box-bread-brumb-contacto {
-        left: 150px;
-    }
-
     textarea#messageContact {
         width: 107% !important;
         position: inherit;
@@ -49,10 +37,6 @@
 }
 
 @media(min-width: 1700px) {
-    #box-bread-brumb-contacto {
-        left: 155px;
-    }
-
     textarea#messageContact {
         width: 107% !important;
         position: inherit;
@@ -130,6 +114,8 @@ textarea#messageContact {
 #box-bread-brumb-contacto {
     position: relative;
     color: green;
+    font-size: 10px;
+    margin-bottom: 20px;
 }
 
 #box-bread-brumb-contacto a {
