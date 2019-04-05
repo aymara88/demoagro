@@ -1,6 +1,6 @@
 function carrusel() {
-  if ($('.Carrusel ul').length > 0) {
-    $('.Carrusel ul').slick({
+    if ($('.lastagro ul').length > 0) {
+    $('.lastagro ul').slick({
       dots: false,
       infinite: false,
       speed: 300,
@@ -11,7 +11,7 @@ function carrusel() {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
-            infinite: true,
+            infinite: false,
             dots: false
           }
         },
@@ -35,5 +35,6 @@ function carrusel() {
 }
 
 $(document).ready(function () {
+  $( ".helperComplement" ).remove();
   carrusel();
 });

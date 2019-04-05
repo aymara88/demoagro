@@ -1,10 +1,12 @@
 @media(max-width: 575px) {
     #mas-vendidos-carrusel .slick-prev {
-        left: -10px !important;
+        left: -5px !important;
+        z-index: 1;
     }
 
     #mas-vendidos-carrusel .slick-next {
         right: -5px !important;
+        z-index: 1;
     }
 }
 
