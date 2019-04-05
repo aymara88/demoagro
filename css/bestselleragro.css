@@ -1,9 +1,18 @@
-.masvendidos {
-    margin-top: 20px;
+@media(max-width: 575px) {
+    #mas-vendidos-carrusel .slick-prev {
+        left: -10px !important;
+    }
+
+    #mas-vendidos-carrusel .slick-next {
+        right: -5px !important;
+    }
 }
 
-.slick-dots{
-    display: none !important;
+/*************************************************************/
+/*************Estilos de las Laminas de Producto**************/
+/*************************************************************/
+.masvendidos {
+    margin-top: 20px;
 }
 
 .productImg {

@@ -1,32 +1,32 @@
 function carrusel() {
   if ($('.Carrusel ul').length > 0) {
     $('.Carrusel ul').slick({
-      arrows: true,
-      infinite: true,
       dots: false,
+      infinite: false,
+      speed: 300,
       slidesToShow: 4,
       slidesToScroll: 4,
-      touchMove: true,
       responsive: [{
-          breakpoint: 1023,
+          breakpoint: 1024,
           settings: {
-            infinite: true,
             slidesToShow: 3,
             slidesToScroll: 3,
-            touchMove: true,
-            dots: false,
-            arrows: true
+            infinite: true,
+            dots: false
           }
         },
         {
-          breakpoint: 767,
+          breakpoint: 768,
           settings: {
-            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
             slidesToShow: 1,
-            slidesToScroll: 1,
-            touchMove: true,
-            dots: false,
-            arrows: true
+            slidesToScroll: 1
           }
         }
       ]
