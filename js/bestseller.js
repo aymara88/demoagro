@@ -18,9 +18,9 @@ $(document).ready(function () {
             for (let i = 0; i < data.length; i++) {
                 const element = data[i];
 
-                var imgDomElmt = '<img class="productImg" src="' + element.items[0].images[0].imageUrl + '"/>';
-                var lamName = '<p class="nameLamina">' + element.productName + '</p>';
-                var lamActPrice = '<p class="actualPrice">$' + element.items[0].sellers[0].commertialOffer.Price + ' MXN </p>';
+                var imgDomElmt = '<a href="' + element.link + '" style="cursor:pointer"><img class="productImg" src="' + element.items[0].images[0].imageUrl + '"/></a>';
+                var lamName = '<a href="' + element.link + '" style="cursor:pointer"><p class="nameLamina">' + element.productName + '</p></a>';
+                var lamActPrice = '<a href="' + element.link + '" style="cursor:pointer"><p class="actualPrice">$' + element.items[0].sellers[0].commertialOffer.Price + ' MXN </p></a>';
                 var lamButtom = '<a href="' + element.items[0].sellers[0].addToCartLink + '" class="productButton" style="cursor:pointer">AÑADIR A LA BOLSA</a>';
 
                 html += '<div class="laminas">' +

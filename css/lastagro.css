@@ -97,7 +97,7 @@ a.productImage {
     color: #fff;
     padding: 9px 12px;
     display: block;
-    width: 160px;
+    width: 180px;
     margin: 0 auto;
     text-decoration: none;
     text-transform: uppercase;
@@ -110,7 +110,7 @@ a.productImage {
 
 .Carrusel .btn-add-buy-button-asynchronous:after {
     content: "AÑADIR A LA BOLSA";
-    font-size: 11px;
+    font-size: 13px;
 }
 
 .regular-block .product-image {
@@ -158,9 +158,10 @@ a.productImage {
 }
 
 .product-name a {
-    font-size: 13px;
+    font-size: 14px;
     text-transform: uppercase;
     color: gray !important;
+    text-decoration: none !important;
 }
 
 .slick-prev:hover:before,
