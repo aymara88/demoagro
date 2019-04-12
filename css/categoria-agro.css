@@ -2,6 +2,53 @@
     box-sizing: border-box;
 }
 
+/*******Estilos para cambiar el icon/dropdown del select a un icon de font awesome*******/
+
+/* remove the original arrow */
+select.custom-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    /* no standardized syntax available, no ie-friendly solution available */
+}
+
+select+i.fa {
+    /* this is so when you click on the chevron, your click actually goes on the dropdown menu */
+    pointer-events: none;
+    /* everything after this is just to cover up the original arrow */
+    /* (for browsers that don't support the syntax used above) */
+    background-color: #fff;
+    padding-right: 5px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: green;
+}
+
+/*******Estilos para cambiar el icon/dropdown del select a un icon de font awesome*******/
+
+#titulo-banner-categorias {
+    position: absolute;
+    color: white;
+    width: 300px;
+    left: 50px;
+    top: 40px;
+    font-size: 30px;
+}
+
+#boton-banner-categorias {
+    position: absolute;
+    background-color: green;
+    color: white !important;
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+    padding: 5px 0 0 15px;
+    text-decoration: none;
+    left: 50px;
+    top: 130px;
+}
+
 .productImg {
     width: 300px;
     height: 300px;
@@ -19,6 +66,8 @@
     margin-top: 50px;
     padding-right: 0;
     padding-left: 0;
+    position: relative;
+    left: 50px;
 }
 
 #row-ordenar {
@@ -27,15 +76,16 @@
 }
 
 #row-ordenar div p {
-    float: right;
     color: darkgreen;
     font-size: 14px;
+    display: inline;
 }
 
 #col-ordenar,
 #col-total-productos {
     padding-right: 0;
     padding-left: 0;
+    text-align: right;
 }
 
 #radio-categoria label {
@@ -51,12 +101,31 @@
     font-size: 1.2rem;
     color: green;
     border: 1px solid green;
+    background: url() no-repeat right .75rem center/8px 10px !important;
 }
 
 #categoria-banner .box-banner img {
-    width: 100%;
-    max-width: 1200px;
+    width: 1700px;
     height: auto;
+    max-height: 300px;
+    max-width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 520px) {
+    #titulo-banner-categorias {
+        font-size: 18px;
+        width: 200px;
+        top: 10px;
+        left: 20px;
+    }
+
+    #boton-banner-categorias {
+        left: 20px;
+        top: 70px;
+        width: 80px;
+        height: 25px;
+        font-size: 12px;
+    }
 }
 
 @media (min-width: 768px) {
