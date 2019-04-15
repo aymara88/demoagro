@@ -20,7 +20,6 @@ select+i.fa {
     background-color: #fff;
     padding-right: 5px;
     position: absolute;
-    right: 10px;
     top: 10px;
     color: green;
 }
@@ -92,10 +91,36 @@ select+i.fa {
     font-size: 14px;
 }
 
+/*********paginado estilos*********/
 #paginado-productos {
     border-bottom: 1px solid white;
     margin-top: 50px;
+    font-size: 14px;
 }
+
+.desplazBoton{
+    border: 0 !important;
+}
+
+.pag_prev{
+    margin-right: 20px;
+}
+
+.pag_next{
+    margin-left: 10px;
+}
+
+.numeros {
+    margin-right: 10px;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover {
+    color: #fff !important;
+    background-color: green;
+    border-color: green;
+}
+
+/*********paginado estilos*********/
 
 .custom-select {
     font-size: 1.2rem;

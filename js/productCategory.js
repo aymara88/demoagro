@@ -20,6 +20,7 @@ function lamProductIdCategory(data, category) {
     html += "</div>";
     container.innerHTML = html;
     cantProd.innerHTML = count;
+    paginadoProductos(2);
 }
 
 /* funcion para la creacion de las laminas de productos cuando estan ordenadas por mas o mejor vendidos*/
@@ -40,17 +41,20 @@ function lamProductIdCategoryBestSeller(data, category) {
     }
     for (var i = 0; i < arrProd.length; i++) {
         const element = arrProd[i];
-        html +=
-            `<div class="laminas">
+        if (element.productName) {
+            html +=
+                `<div class="laminas">
                 <a href="${element.link}" style="cursor:pointer"><img class="productImg" src="${element.items[0].images[0].imageUrl}"/></a>
                 <a href="${element.link}" style="cursor:pointer"><p class="nameLamina">${element.productName}</p></a>
                 <a href="${element.link}" style="cursor:pointer"><p class="actualPrice">$ ${element.items[0].sellers[0].commertialOffer.Price} MXN </p></a>
                 <a href="${element.items[0].sellers[0].addToCartLink}" class="productButton" style="cursor:pointer">AÑADIR A LA BOLSA</a>
             </div>`;
+        }
     }
     html += "</div>";
     container.innerHTML = html;
     cantProd.innerHTML = arrProd.length;
+    paginadoProductos(2);
 }
 
 /* funcion de llamada a la API de VTEX para obtener los productos segun un Ordenamiento*/
@@ -150,3 +154,92 @@ function myOrderOfProducts(catId) {
             productCategoryASC(catId);
     }
 }
+
+function cantOfProductsToShow() {
+    let pageSizeSelect = document.getElementById("selectProductPerPage").value;
+
+    switch (pageSizeSelect) {
+        case "6":
+            paginadoProductos(6);
+            break;
+        case "9":
+            paginadoProductos(9);
+            break;
+        case "12":
+            paginadoProductos(12);
+            break;
+        case "15":
+            paginadoProductos(15);
+            break;
+        case "all":
+            paginadoProductos('all');
+            break;
+        default:
+            paginadoProductos(2);
+    }
+}
+
+/**********Paginado***********/
+function paginadoProductos(pageSizeSelect) {
+
+    if (pageSizeSelect !== 'all') {
+        pageSize = pageSizeSelect;
+    } else if (pageSizeSelect == 'all') {
+        pageSize = $('.laminas').length;
+    }
+
+    pagesCount = $(".laminas").length;
+    var currentPage = 1;
+
+    /////////// PREPARE NAV ///////////////
+    var nav = '';
+
+    console.log($(".numeros"));
+    console.log($(".numeros").length);
+
+    if ($(".numeros").length > 0) {
+        var lis = document.querySelectorAll('.pagination .numeros');
+        for (var i = 0; li = lis[i]; i++) {
+            li.parentNode.removeChild(li);
+        }
+    }
+
+    var totalPages = Math.ceil(pagesCount / pageSize);
+    for (var s = 0; s < totalPages; s++) {
+        nav += '<li class="numeros"><a href="#">' + (s + 1) + '</a></li>';
+    }
+    $(".pag_prev").after(nav);
+    $(".numeros").first().addClass("active");
+    //////////////////////////////////////
+
+    showPage = function () {
+        $(".laminas").hide().each(function (n) {
+            if (n >= pageSize * (currentPage - 1) && n < pageSize * currentPage)
+                $(this).show();
+        });
+    }
+    showPage();
+
+
+    $(".pagination li.numeros").click(function () {
+        $(".pagination li").removeClass("active");
+        $(this).addClass("active");
+        currentPage = parseInt($(this).text());
+        showPage();
+    });
+
+    $(".pagination li.pag_prev").click(function () {
+        if ($(this).next().is('.active')) return;
+        $('.numeros.active').removeClass('active').prev().addClass('active');
+        currentPage = currentPage > 1 ? (currentPage - 1) : 1;
+        showPage();
+    });
+
+    $(".pagination li.pag_next").click(function () {
+        if ($(this).prev().is('.active')) return;
+        $('.numeros.active').removeClass('active').next().addClass('active');
+        currentPage = currentPage < totalPages ? (currentPage + 1) : totalPages;
+        showPage();
+    });
+}
+/**********Paginado***********/
