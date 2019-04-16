@@ -1,3 +1,56 @@
+/* funcion para laminar todos los productos sin importar sus subcategorias */
+function lamAllProducts(data) {
+    let container = document.getElementById('productos-categoria');
+    let cantProd = document.getElementById('cantProd');
+    let count = 0;
+    let html = "<div>";
+    for (var i = 0; i < data.length; i++) {
+        const element = data[i];
+        count++;
+        html +=
+            `<div class="laminas">
+                <a href="${element.link}" style="cursor:pointer"><img class="productImg" src="${element.items[0].images[0].imageUrl}"/></a>
+                <a href="${element.link}" style="cursor:pointer"><p class="nameLamina">${element.productName}</p></a>
+                <a href="${element.link}" style="cursor:pointer"><p class="actualPrice">$ ${element.items[0].sellers[0].commertialOffer.Price} MXN </p></a>
+                <a href="${element.items[0].sellers[0].addToCartLink}" class="productButton" style="cursor:pointer">AÑADIR A LA BOLSA</a>
+            </div>`;
+    }
+    html += "</div>";
+    container.innerHTML = html;
+    cantProd.innerHTML = count;
+    paginadoProductos(2);
+}
+
+function lamAllProductsBestSeller(data) {
+    let container = document.getElementById('productos-categoria');
+    let cantProd = document.getElementById('cantProd');
+    let html = "<div>";
+    let arrProd = [];
+    for (var i = 0; i < data.length; i++) {
+        const element = data[i];
+        if (element['Más Vendido'] == '1') {
+            arrProd.unshift(element);
+        } else {
+            arrProd.push(element);
+        }
+    }
+    console.log(arrProd);
+    for (var i = 0; i < arrProd.length; i++) {
+        const element = arrProd[i];
+        html +=
+            `<div class="laminas">
+                <a href="${element.link}" style="cursor:pointer"><img class="productImg" src="${element.items[0].images[0].imageUrl}"/></a>
+                <a href="${element.link}" style="cursor:pointer"><p class="nameLamina">${element.productName}</p></a>
+                <a href="${element.link}" style="cursor:pointer"><p class="actualPrice">$ ${element.items[0].sellers[0].commertialOffer.Price} MXN </p></a>
+                <a href="${element.items[0].sellers[0].addToCartLink}" class="productButton" style="cursor:pointer">AÑADIR A LA BOLSA</a>
+            </div>`;
+    }
+    html += "</div>";
+    container.innerHTML = html;
+    cantProd.innerHTML = arrProd.length;
+    paginadoProductos(2);
+}
+
 /* funcion para la creacion de las laminas de productos*/
 function lamProductIdCategory(data, category) {
     let container = document.getElementById('productos-categoria');
@@ -7,6 +60,15 @@ function lamProductIdCategory(data, category) {
     for (var i = 0; i < data.length; i++) {
         const element = data[i];
         if (element.categoryId == category) {
+            count++;
+            html +=
+                `<div class="laminas">
+                <a href="${element.link}" style="cursor:pointer"><img class="productImg" src="${element.items[0].images[0].imageUrl}"/></a>
+                <a href="${element.link}" style="cursor:pointer"><p class="nameLamina">${element.productName}</p></a>
+                <a href="${element.link}" style="cursor:pointer"><p class="actualPrice">$ ${element.items[0].sellers[0].commertialOffer.Price} MXN </p></a>
+                <a href="${element.items[0].sellers[0].addToCartLink}" class="productButton" style="cursor:pointer">AÑADIR A LA BOLSA</a>
+            </div>`;
+        } else if ((category == 25) && (element.categoryId == 31 || element.categoryId == 32)) {
             count++;
             html +=
                 `<div class="laminas">
@@ -32,6 +94,12 @@ function lamProductIdCategoryBestSeller(data, category) {
     for (var i = 0; i < data.length; i++) {
         const element = data[i];
         if (element.categoryId == category) {
+            if (element['Más Vendido'] == '1') {
+                arrProd.unshift(element);
+            } else {
+                arrProd.push(element);
+            }
+        } else if ((category == 25) && (element.categoryId == 31 || element.categoryId == 32)) {
             if (element['Más Vendido'] == '1') {
                 arrProd.unshift(element);
             } else {
@@ -66,7 +134,12 @@ function productCategoryASC(category) {
         })
         .done(function (responseData) {
             data = responseData;
-            lamProductIdCategory(data, category);
+            console.log(data);
+            console.log(category);
+            if (category != 23) {
+                lamProductIdCategory(data, category);
+            } else lamAllProducts(data);
+
         });
 }
 
@@ -79,7 +152,10 @@ function productCategoryDESC(category) {
         })
         .done(function (responseData) {
             data = responseData;
-            lamProductIdCategory(data, category);
+            if (category != 23) {
+                lamProductIdCategory(data, category);
+            } else lamAllProducts(data);
+
         });
 }
 
@@ -92,7 +168,9 @@ function productCategoryBestRate(category) {
         })
         .done(function (responseData) {
             data = responseData;
-            lamProductIdCategory(data, category);
+            if (category != 23) {
+                lamProductIdCategory(data, category);
+            } else lamAllProducts(data);
         });
 }
 
@@ -105,7 +183,9 @@ function productCategoryReleaseDate(category) {
         })
         .done(function (responseData) {
             data = responseData;
-            lamProductIdCategory(data, category);
+            if (category != 23) {
+                lamProductIdCategory(data, category);
+            } else lamAllProducts(data);
         });
 }
 
@@ -118,7 +198,9 @@ function productCategoryBestSeller(category) {
         })
         .done(function (responseData) {
             data = responseData;
-            lamProductIdCategoryBestSeller(data, category);
+            if (category != 23) {
+                lamProductIdCategoryBestSeller(data, category);
+            } else lamAllProductsBestSeller(data);
         });
 }
 
@@ -155,6 +237,7 @@ function myOrderOfProducts(catId) {
     }
 }
 
+/* se llama a esta funcion en el onchange() del select del cantidad de productos a mostrar por pagina*/
 function cantOfProductsToShow() {
     let pageSizeSelect = document.getElementById("selectProductPerPage").value;
 

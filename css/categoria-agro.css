@@ -87,9 +87,78 @@ select+i.fa {
     text-align: right;
 }
 
-#radio-categoria label {
-    font-size: 14px;
+/***********Estilos al radio input de los filtros ***********/
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 13px;
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
+.filtroh2{
+    margin: 15px 0 15px 0;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a green background */
+.container input:checked~.checkmark {
+    background-color: green;
+}
+
+/* Create the indicator (the check - hidden when not checked) */
+.checkmark:after {
+    content: " ";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (check) when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (check) */
+.container .checkmark:after {
+    content: "✔";
+    color: white;
+    top: 0;
+    left: 5px;
+    width: 12px;
+    height: 12px;
+}
+
+/***********Estilos al radio input de los filtros ***********/
+
 
 /*********paginado estilos*********/
 #paginado-productos {
@@ -98,15 +167,15 @@ select+i.fa {
     font-size: 14px;
 }
 
-.desplazBoton{
+.desplazBoton {
     border: 0 !important;
 }
 
-.pag_prev{
+.pag_prev {
     margin-right: 20px;
 }
 
-.pag_next{
+.pag_next {
     margin-left: 10px;
 }
 
@@ -114,7 +183,9 @@ select+i.fa {
     margin-right: 10px;
 }
 
-.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover {
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover {
     color: #fff !important;
     background-color: green;
     border-color: green;
@@ -150,13 +221,6 @@ select+i.fa {
         width: 80px;
         height: 25px;
         font-size: 12px;
-    }
-}
-
-@media (min-width: 768px) {
-    #radio-categoria {
-        flex: 0 0 14.666667%;
-        max-width: 14.666667%;
     }
 }
 

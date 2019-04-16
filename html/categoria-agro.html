@@ -12,11 +12,13 @@
     <link rel="stylesheet" type="text/css" href="/arquivos/categoria-agro.css" />
 
     <script src="/arquivos/productCategory.js"></script> 
+    <script src="/arquivos/filtrosProductos.js"></script> 
 
     <script>
         console.log('categoria page test');
         let catId = getParameterByName('catId');
         productCategoryASC(catId);
+        filtrosDeProductos(catId);
     </script>
 
 </head>
@@ -50,31 +52,50 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-2" id="radio-categoria">
-                    <label>
-                        <input type="radio" name="categoria" value="Alimentos Libres de Azúcar" /> 
-                        SIN FLITROS
-                    </label>
-                    <label>
-                        <input type="radio" name="categoria" value="Alimentos Libres de Azúcar" /> 
-                        LIBRE DE AZÚCAR
-                    </label>
-                    <label>
-                        <input type="radio" name="categoria" value="Alimentos Libres de Gluten" /> 
-                        LIBRE DE GLUTEN
-                    </label>
-                    <label>
-                        <input type="radio" name="categoria" value="Vegetales Orgánicos" /> 
-                        VEGETALES ORGÁNICOS
-                    </label>
-                    <label>
-                        <input type="radio" name="categoria" value="Frutas Orgánicas" /> 
-                        FRUTAS ORGÁNICAS
-                    </label>
-                    <label>
-                        <input type="radio" name="categoria" value="Especias de tu Cocina" /> 
-                        ESPECIAS DE TU COCINA
-                    </label>
+                <div class="col-md-2">
+                    <div id="radio-categoria" class="row">
+                            <h2 class="filtroh2">Categorías</h2>
+                            <label class="container">SIN FILTROS
+                                <input type="radio" checked="checked" name="categoria" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">LIBRE DE AZÚCAR
+                                <input type="radio" name="categoria" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">LIBRE DE GLUTEN
+                                <input type="radio" name="categoria" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">VEGETALES ORGÁNICOS
+                                <input type="radio" name="categoria" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">FRUTAS ORGÁNICAS
+                                <input type="radio" name="categoria" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">ESPECIAS DE TU COCINA
+                                <input type="radio" name="categoria" />
+                                <span class="checkmark"></span>
+                            </label>
+                    </div>
+                    <div id="radio-especificacion"  class="row">
+                            <h2 class="filtroh2">Especificación</h2>
+                            <label class="container">SIN FILTROS
+                                <input type="radio" checked="checked" name="especificacion" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Últimos Productos
+                              <input type="radio" name="especificacion" />
+                              <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Más Vendidos
+                              <input type="radio" name="especificacion" />
+                              <span class="checkmark"></span>
+                            </label>
+                    </div>
+                    <div id="rango-precio"  class="row"></div>                    
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-9">
@@ -90,7 +111,7 @@
                     <div class="row" id="row-ordenar">
                         <div class="col-xs-4" id="col-ordenar">
                             <select class="custom-select" id="selectOrder" onchange="myOrderOfProducts(catId)">
-                                <option>ORDENAR POR</option>
+                                <option selected="selected">ORDENAR POR</option>
                                 <option value="asc">A-Z</option>
                                 <option value="desc">Z-A</option>
                                 <option value="bestseller">LOS MÁS VENDIDOS</option>
@@ -101,7 +122,7 @@
                         </div>
                         <div class="col-xs-4" id="col-productos-pagina">
                             <select class="custom-select" id="selectProductPerPage" onchange="cantOfProductsToShow()">
-                                <option>ARTICULOS POR PÁGINA</option>
+                                <option selected="selected">ARTICULOS POR PÁGINA</option>
                                 <option value="6">6</option>
                                 <option value="9">9</option>
                                 <option value="12">12</option>
