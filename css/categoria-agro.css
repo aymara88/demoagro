@@ -103,7 +103,7 @@ select+i.fa {
     user-select: none;
 }
 
-.filtroh2{
+.filtroh2 {
     margin: 15px 0 15px 0;
 }
 
@@ -207,6 +207,11 @@ select+i.fa {
     max-width: 100%;
 }
 
+#row-content-products {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
 @media (min-width: 320px) and (max-width: 520px) {
     #titulo-banner-categorias {
         font-size: 18px;
@@ -224,11 +229,13 @@ select+i.fa {
     }
 }
 
-@media (min-width: 1560px) {
+@media(min-width: 1471px) {
     #container-categoria {
-        padding: 0 170px 0 110px;
+        padding: 0 140px 0 110px;
     }
+}
 
+@media (min-width: 1560px) {
     .laminas {
         margin-right: 70px;
         margin-bottom: 50px;
