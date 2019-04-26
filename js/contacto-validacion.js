@@ -58,6 +58,8 @@ function validarContact() {
         http_request.setRequestHeader("x-vtex-api-appToken", "GLURZCESHTOYXIGUGHHYGSKWUSEBAHFRDELYHNGRSUQRVAXLZMTEDADOAYWHYCRZOWUTXINSBQFMCSATUSCOOANDBXXJQYSPDQDYFEORZADNUQLHXDNGADLOJQSAKDBC");
         http_request.send(data);
         document.getElementById("frmContact").reset();
+        let container = document.getElementById("mensaje_exito");
+        container.innerHTML = "Hemos recibido su comentario y le daremos respuesta lo antes posible.";
         return false;
     }
 }
