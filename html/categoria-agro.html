@@ -70,7 +70,13 @@
                               <span class="checkmark"></span>
                             </label>
                     </div>
-                    <div id="rango-precio"  class="row"></div>                    
+                    <div id="rango-precio"  class="row">
+                        <h2 class="filtroh2">Precio</h2>
+                        <label for="priceI">MENOR</label><input type="text" id="priceI" name="priceI" />
+                        <div style="margin-top:20px;"></div>
+                        <label for="priceF">MAYOR</label><input type="text" id="priceF" name="priceF" />
+                        <button onClick="addData(priceI.value, priceF.value)">APLICAR</button> 
+                    </div>                    
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-9">

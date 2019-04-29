@@ -212,6 +212,33 @@ select+i.fa {
     margin-right: 0 !important;
 }
 
+/**********Estilos de los input de rango de precio de los filtros**********/
+#rango-precio {
+    display: block;
+    margin-top: 20px;
+}
+
+#radio-especificacion {
+    margin-top: 20px;
+}
+
+#rango-precio button {
+    display: block;
+    margin-top: 20px;
+    color: white;
+    background: green;
+    border: 0;
+    padding: 10px 12px;
+    font-size: 12px;
+}
+
+#rango-precio label {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/**********Estilos de los input de rango de precio de los filtros**********/
+
 @media (min-width: 320px) and (max-width: 520px) {
     #titulo-banner-categorias {
         font-size: 18px;

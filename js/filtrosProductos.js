@@ -32,8 +32,10 @@ function filtrosSubCategorias(data, catId) {
         };
         arrCategorias.push(products);
     }
-
+    console.log(data);
+    console.log(arrCategorias);
     let arrCategoriasUnique = getUnique(arrCategorias, 'categoriaId');
+    console.log(arrCategoriasUnique);
     let html = "<h2 class='filtroh2'>Categorías</h2>";
 
     if (arrCategoriasUnique.length == 1) {
@@ -46,32 +48,38 @@ function filtrosSubCategorias(data, catId) {
 
     } else if (arrCategoriasUnique.length > 1) {
         html += "<label class='container'>SIN FILTROS<input type='radio' checked='checked' name='categoria' value='" + catId + "'  /><span class='checkmark'></span></label>";
-        for (var i = 0; i < arrCategoriasUnique.length; i++) {
-            const element = arrCategoriasUnique[i];
-            if (element.categoriaNombre.length > 4 && element.categoriaNombre[3] != "" && catId == 25) {
-                html +=
-                    ` <label class="container">${element.categoriaNombre[3]}
-                    <input type="radio" name="categoria" value="${element.categoriaId}"/>
-                    <span class="checkmark"></span>
-                  </label>
-                `;
-            } else if (element.categoriaNombre.length <= 4 && catId != 25) {
-                if (element.categoriaNombre[2] == "Alimentos Libres de Azúcar") {
-                    html +=
-                        ` <label class="container">${element.categoriaNombre[2]}
-                        <input type="radio" name="categoria" value="25"/>
-                        <span class="checkmark"></span>
-                      </label>
-                    `;
-                } else {
-                    html +=
-                        ` <label class="container">${element.categoriaNombre[2]}
-                        <input type="radio" name="categoria" value="${element.categoriaId}"/>
-                        <span class="checkmark"></span>
-                      </label>
-                    `;
+        let arrFiltros = [];
+        if (catId == 23) {
+            for (let i = 0; i < arrCategoriasUnique.length; i++) {
+                const element = arrCategoriasUnique[i];
+                let products = {
+                    categoriaId: element.categoriaId,
+                    categoriaNombre: element.categoriaNombre[2]
+                };
+                arrFiltros.push(products);
+            }
+        } else {
+            for (let i = 0; i < arrCategoriasUnique.length; i++) {
+                const element = arrCategoriasUnique[i];
+                if (element.categoriaNombre[3] != "") {
+                    let products = {
+                        categoriaId: element.categoriaId,
+                        categoriaNombre: element.categoriaNombre[3]
+                    };
+                    arrFiltros.push(products);
                 }
             }
+        }
+        console.log(arrFiltros);
+        let arrCategoriasUniqueFiltrado = getUnique(arrFiltros, 'categoriaNombre');
+        for (let i = 0; i < arrCategoriasUniqueFiltrado.length; i++) {
+            const element = arrCategoriasUniqueFiltrado[i];
+            html +=
+                ` <label class="container">${element.categoriaNombre}
+                 <input type="radio" name="categoria" value="${element.categoriaId}"/>
+                 <span class="checkmark"></span>
+              </label>
+            `;
         }
     }
     container.innerHTML = html;
@@ -107,25 +115,54 @@ function getUnique(arr, comp) {
     return unique;
 }
 
-function lamProductByFilter(data) {
+function lamProductByFilter(data, priceI, priceF) {
     console.log(data);
     console.log(data.length);
+    console.log(priceI);
+    console.log(priceF);
     let container = document.getElementById('productos-categoria');
     let cantProd = document.getElementById('cantProd');
     let count = 0;
+    let countWithPrice = 0;
     let html = "<div>";
     if (data.length > 0) {
-        for (var i = 0; i < data.length; i++) {
-            const element = data[i];
-            count++;
-            html +=
+        if (priceI && priceF) {
+            for (var i = 0; i < data.length; i++) {
+                const element = data[i];
+                if ((element.items[0].sellers[0].commertialOffer.Price <= precioF) && (element.items[0].sellers[0].commertialOffer.Price >= precioI)) {
+                    count++;
+                    countWithPrice++;
+                    html +=
+                    `<div class="laminas">
+                    <a href="${element.link}" style="cursor:pointer"><img class="productImg" src="${element.items[0].images[0].imageUrl}"/></a>
+                    <a href="${element.link}" style="cursor:pointer"><p class="nameLamina">${element.productName}</p></a>
+                    <a href="${element.link}" style="cursor:pointer"><p class="actualPrice">$ ${element.items[0].sellers[0].commertialOffer.Price} MXN </p></a>
+                    <a href="${element.items[0].sellers[0].addToCartLink}" class="productButton" style="cursor:pointer">AÑADIR A LA BOLSA</a>
+                    </div>`;
+                }
+            }
+            console.log(countWithPrice);
+            if (countWithPrice == 0) {
+                html +=
+                `<h1>No existen productos para mostrar con los filtros seleccionados</h1>`;
+                html += "</div>";
+                container.innerHTML = html;
+                cantProd.innerHTML = '0';
+            }
+        } else {
+            for (var i = 0; i < data.length; i++) {
+                const element = data[i];
+                count++;
+                html +=
                 `<div class="laminas">
                 <a href="${element.link}" style="cursor:pointer"><img class="productImg" src="${element.items[0].images[0].imageUrl}"/></a>
                 <a href="${element.link}" style="cursor:pointer"><p class="nameLamina">${element.productName}</p></a>
                 <a href="${element.link}" style="cursor:pointer"><p class="actualPrice">$ ${element.items[0].sellers[0].commertialOffer.Price} MXN </p></a>
                 <a href="${element.items[0].sellers[0].addToCartLink}" class="productButton" style="cursor:pointer">AÑADIR A LA BOLSA</a>
-            </div>`;
+                </div>`;
+            }
         }
+
         html += "</div>";
         container.innerHTML = html;
         cantProd.innerHTML = count;
@@ -139,8 +176,10 @@ function lamProductByFilter(data) {
     }
 }
 
-function ajaxCallEspecification(especificacion, catIdRadio, catIdUrl) {
+function ajaxCallEspecification(especificacion, catIdRadio, catIdUrl, priceI, priceF) {
     let espAjax;
+    console.log(priceI);
+    console.log(priceF);
     if (especificacion == 0) {
         if (catIdUrl == 23 && catIdRadio == catIdUrl) {
             $.ajax({
@@ -149,7 +188,7 @@ function ajaxCallEspecification(especificacion, catIdRadio, catIdUrl) {
                 .done(function (responseData) {
                     data = responseData;
                     console.log(data);
-                    lamProductByFilter(data);
+                    lamProductByFilter(data, priceI, priceF);
                 });
         } else if (catIdRadio == 25 && (catIdUrl == 23 || catIdUrl == 25)) {
             $.ajax({
@@ -158,7 +197,7 @@ function ajaxCallEspecification(especificacion, catIdRadio, catIdUrl) {
                 .done(function (responseData) {
                     data = responseData;
                     console.log(data);
-                    lamProductByFilter(data);
+                    lamProductByFilter(data, priceI, priceF);
                 });
         } else if (catIdUrl != 23 && catIdRadio != 25 && catIdRadio != catIdUrl) {
             $.ajax({
@@ -167,7 +206,7 @@ function ajaxCallEspecification(especificacion, catIdRadio, catIdUrl) {
                 .done(function (responseData) {
                     data = responseData;
                     console.log(data);
-                    lamProductByFilter(data);
+                    lamProductByFilter(data, priceI, priceF);
                 });
         } else if (catIdUrl != 23 && catIdRadio != 25 && catIdRadio == catIdUrl) {
             $.ajax({
@@ -176,7 +215,7 @@ function ajaxCallEspecification(especificacion, catIdRadio, catIdUrl) {
                 .done(function (responseData) {
                     data = responseData;
                     console.log(data);
-                    lamProductByFilter(data);
+                    lamProductByFilter(data, priceI, priceF);
                 });
         } else if (catIdUrl == 23 && catIdRadio != catIdUrl) {
             $.ajax({
@@ -185,7 +224,7 @@ function ajaxCallEspecification(especificacion, catIdRadio, catIdUrl) {
                 .done(function (responseData) {
                     data = responseData;
                     console.log(data);
-                    lamProductByFilter(data);
+                    lamProductByFilter(data, priceI, priceF);
                 });
         }
     } else {
@@ -202,7 +241,7 @@ function ajaxCallEspecification(especificacion, catIdRadio, catIdUrl) {
                 .done(function (responseData) {
                     data = responseData;
                     console.log(data);
-                    lamProductByFilter(data);
+                    lamProductByFilter(data, priceI, priceF);
                 });
         } else if (catIdRadio == 25 && (catIdUrl == 23 || catIdUrl == 25)) {
             $.ajax({
@@ -211,7 +250,7 @@ function ajaxCallEspecification(especificacion, catIdRadio, catIdUrl) {
                 .done(function (responseData) {
                     data = responseData;
                     console.log(data);
-                    lamProductByFilter(data);
+                    lamProductByFilter(data, priceI, priceF);
                 });
         } else if (catIdUrl != 23 && catIdRadio != 25 && catIdRadio != catIdUrl) {
             $.ajax({
@@ -220,7 +259,7 @@ function ajaxCallEspecification(especificacion, catIdRadio, catIdUrl) {
                 .done(function (responseData) {
                     data = responseData;
                     console.log(data);
-                    lamProductByFilter(data);
+                    lamProductByFilter(data, priceI, priceF);
                 });
         } else if (catIdUrl != 23 && catIdRadio != 25 && catIdRadio == catIdUrl) {
             $.ajax({
@@ -229,7 +268,7 @@ function ajaxCallEspecification(especificacion, catIdRadio, catIdUrl) {
                 .done(function (responseData) {
                     data = responseData;
                     console.log(data);
-                    lamProductByFilter(data);
+                    lamProductByFilter(data, priceI, priceF);
                 });
         } else if (catIdUrl == 23 && catIdRadio != catIdUrl) {
             $.ajax({
@@ -238,10 +277,9 @@ function ajaxCallEspecification(especificacion, catIdRadio, catIdUrl) {
                 .done(function (responseData) {
                     data = responseData;
                     console.log(data);
-                    lamProductByFilter(data);
+                    lamProductByFilter(data, priceI, priceF);
                 });
         }
 
     }
-    console.log(espAjax);
 }
