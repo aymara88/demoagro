@@ -18,7 +18,7 @@ function lamAllProducts(data) {
     html += "</div>";
     container.innerHTML = html;
     cantProd.innerHTML = count;
-    paginadoProductos(2);
+    paginadoProductos(3);
 }
 
 function lamAllProductsBestSeller(data) {
@@ -48,7 +48,7 @@ function lamAllProductsBestSeller(data) {
     html += "</div>";
     container.innerHTML = html;
     cantProd.innerHTML = arrProd.length;
-    paginadoProductos(2);
+    paginadoProductos(3);
 }
 
 /* funcion para la creacion de las laminas de productos*/
@@ -82,7 +82,7 @@ function lamProductIdCategory(data, category) {
     html += "</div>";
     container.innerHTML = html;
     cantProd.innerHTML = count;
-    paginadoProductos(2);
+    paginadoProductos(3);
 }
 
 /* funcion para la creacion de las laminas de productos cuando estan ordenadas por mas o mejor vendidos*/
@@ -122,11 +122,13 @@ function lamProductIdCategoryBestSeller(data, category) {
     html += "</div>";
     container.innerHTML = html;
     cantProd.innerHTML = arrProd.length;
-    paginadoProductos(2);
+    paginadoProductos(3);
 }
 
 /* funcion de llamada a la API de VTEX para obtener los productos segun un Ordenamiento*/
 function productCategoryASC(category) {
+    console.log("categoryId",category);
+
     var data;
 
     $.ajax({
@@ -258,7 +260,7 @@ function cantOfProductsToShow() {
             paginadoProductos('all');
             break;
         default:
-            paginadoProductos(2);
+            paginadoProductos(3);
     }
 }
 

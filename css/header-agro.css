@@ -154,3 +154,12 @@ nav {
 .carousel-caption {
     z-index: 0 !important;
 }
+
+/*general*/
+div#section-menu-logo {
+    width: 85%;
+}
+
+.col-xs-12.col-md-10.col-menu, nav.navbar.navbar-expand-md.navbar-light, a.navbar-brand.logo-position {
+    padding: 0;
+}

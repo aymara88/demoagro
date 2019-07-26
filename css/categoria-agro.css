@@ -268,3 +268,46 @@ select+i.fa {
         margin-bottom: 50px;
     }
 }
+
+/**Estilos de los input type range de los precios**/
+span#valor_max {
+    float: right;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    min-height: 27px !important;
+    background: whitesmoke;
+    outline: none;
+    opacity: 0.8;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-bottom: 15px;
+    clear: both;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: green;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: green;
+    cursor: pointer;
+}
+
+div#container-categoria {
+    width: 85%;
+}

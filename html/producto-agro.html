@@ -8,6 +8,11 @@
     <vtex:template id="commonStylesAgro" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/arquivos/logo-agro.png" />
+    <link href="/arquivos/producto-agro.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/arquivos/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/arquivos/slick-theme.css" />
+    
+    <script src="/arquivos/slick.min.js"></script>
 
     <script>
         console.log('lov')
@@ -37,7 +42,7 @@
 
         <div id="product-extra-top"></div>
 
-        <section id="product-content" class="container">
+        <section id="product-content" class="container-fluid">
 
             <div id="box-bread-brumb" class="hidden-xs">
                 <vtex.cmc:breadCrumb />
@@ -49,19 +54,20 @@
 
                 <div class="product-name-mobile col-xs-12 visible-xs">
                     <div class="product-name">
-                        <div id="brand">
+                        <!-- <div id="brand">
                             <vtex.cmc:brandName />
-                        </div>
+                        </div> -->
                         <vtex.cmc:productName />
+                        <div id="reviews-container">
+                            <a href="#reviews" class="link-ancora">
+                                <vtex.cmc:evaluationRate />
+                            </a>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="codigo-produto col-xs-12">
-                            <span>Cód:</span>
+                            <span>Código de producto:</span>
                             <vtex.cmc:skuReference />
-                        </div>
-                        <div class="col-xs-12">
-                            <div class="avaliacoes"><a href="#reviews" class="link-ancora">
-                                    <vtex.cmc:evaluationRate /></a></div>
                         </div>
                     </div>
                 </div>
@@ -69,29 +75,29 @@
                 <div class="product-image col-xs-12 col-sm-7 col-lg-6 text-center">
                     <!--  Component: Product Images -->
                     <vtex.cmc:ProductImage zoom="on" />
-
-                    <vtex.cmc:facebookLike />
+                    <!-- <vtex.cmc:facebookLike /> -->
                 </div><!-- .product-image -->
 
                 <div class="product-info col-xs-12 col-sm-5 col-lg-6">
 
                     <div class="product-name hidden-xs">
-                        <div id="brand">
+                        <!-- <div id="brand">
                             <vtex.cmc:brandName />
-                        </div>
+                        </div> -->
                         <h1>
                             <vtex.cmc:productName />
+                            <div id="reviews-container">
+                                <a href="#reviews" class="link-ancora">
+                                    <vtex.cmc:evaluationRate />
+                                </a>
+                            </div>                            
                         </h1>
                     </div>
 
                     <div class="row hidden-xs">
                         <div class="codigo-produto col-xs-12 col-lg-6">
-                            <span>Cód:</span>
+                            <span>Código de producto:</span>
                             <vtex.cmc:skuReference />
-                        </div>
-                        <div class="col-xs-12 col-lg-6">
-                            <div class="avaliacoes"><a href="#reviews" class="link-ancora">
-                                    <vtex.cmc:evaluationRate /></a></div>
                         </div>
                     </div>
 
@@ -111,6 +117,8 @@
                         <!--  Component: Payment methods -->
                         <!-- <vtex.cmc:OtherPaymentMethod/> -->
                     </div><!-- .price-box -->
+                    
+                    <vtex.cmc:ProductDescription/>
 
                     <div class="seletor-sku">
                         <vtex.cmc:stockKeepingUnitSelection />
@@ -120,33 +128,16 @@
                         <vtex.cmc:BuyButton />
                     </div><!-- .buy-button-box -->
 
-                    <div id="product-extra-details-1"></div>
-
-                    <div class="shipping-box">
-                        <vtex.cmc:shippingValue />
-                        <script type="text/javascript">
-                            $(document).ready(function () {
-                                ShippingValue();
-                            });
-                        </script>
-                    </div>
-
-                    <div id="product-extra-details-2"></div>
-
                 </div><!-- .product-info -->
 
             </div><!-- .product-details -->
 
-            <div id="product-extra-details-3"></div>
-
             <div class="product-description">
 
                 <div class="btn-group hidden-xs" role="group" aria-label="menu-anchor">
-                    <a href="#description" class="btn btn-default">Descripción del Producto</a>
-                    <a href="#specification" class="btn btn-default">Especificaciones del Producto</a>
-                    <a href="#reviews" class="btn btn-default">Disponibilidad</a>
+                    <a href="#specification" class="btn btn-default">ESPECIFICACIONES DEL PRODUCTO</a>
+                    <a href="#reviews" class="btn btn-default">OPINIONES</a>
                 </div>
-
 
                 <div id="product-extra-description-1"></div>
 
@@ -155,18 +146,6 @@
                     <vtex.cmc:BuyTogether />
                 </div>
 
-                <div id="product-extra-description-2"></div>
-
-                <div class="product-description-box">
-                    <div id="description">
-                        <h2 class="title">Descripción del Producto</h2>
-                        <!--  Component: Description -->
-                        <vtex.cmc:ProductDescription />
-                    </div><!-- .description -->
-                </div>
-
-                <div id="product-extra-description-3"></div>
-
                 <div class="product-description-box">
                     <div id="specification">
                         <!--  Component: Specification -->
@@ -174,15 +153,11 @@
                     </div><!-- .description -->
                 </div>
 
-                <div id="product-extra-description-4"></div>
-
                 <div class="product-description-box">
                     <div id="reviews" class="rating">
                         <vtex.cmc:UserReview />
                     </div>
                 </div>
-
-                <div id="product-extra-description-5"></div>
 
                 <div class="product-description-box">
                     <div class="showcase-default showcase-owl">
@@ -190,19 +165,9 @@
                     </div><!-- .showcase-default -->
                 </div>
 
-                <div id="product-extra-description-6"></div>
-
                 <div class="product-description-box">
                     <div class="showcase-default showcase-owl">
                         <vtex:contentPlaceHolder id="Quem-viu-tambem-comprou" />
-                    </div><!-- .showcase-default -->
-                </div>
-
-                <div id="product-extra-description-7"></div>
-
-                <div class="product-description-box">
-                    <div class="showcase-default showcase-owl">
-                        <vtex:contentPlaceHolder id="Quem-comprou-tambem-comprou" />
                     </div><!-- .showcase-default -->
                 </div>
             </div><!-- .product-description -->
@@ -239,7 +204,6 @@
     </div><!-- .container-fluid -->
 
 </body>
-
 <vtex:template id="commonScriptsAgro" />
-
+<script src="/arquivos/producto-agro.js"></script>
 </html>

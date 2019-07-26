@@ -166,7 +166,7 @@ function lamProductByFilter(data, priceI, priceF) {
         html += "</div>";
         container.innerHTML = html;
         cantProd.innerHTML = count;
-        paginadoProductos(2);
+        paginadoProductos(3);
     } else {
         html +=
             `<h1>No existen productos para mostrar con los filtros seleccionados</h1>`;

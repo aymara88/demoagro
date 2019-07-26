@@ -11,22 +11,21 @@
     <link rel="stylesheet" type="text/css" href="/arquivos/bestselleragro.css" />
     <link rel="stylesheet" type="text/css" href="/arquivos/categoria-agro.css" />
 
-    <script src="/arquivos/productCategory.js"></script> 
-    <script src="/arquivos/filtrosProductos.js"></script> 
+    <!-- <script src="/arquivos/productCategory.js"></script> 
+    <script src="/arquivos/filtrosProductos.js"></script>  -->
+    <script src="/arquivos/catalogoProductos.js"></script> 
 
     <script>
         console.log('categoria page test');
-        let catId = getParameterByName('catId');
-        productCategoryASC(catId);
-        filtrosDeProductos(catId);
+        let catIdUrl = getParameterByName('catId');
+        productCategoryGet(catIdUrl);
+        /* filtrosDeProductos(catIdUrl); */
     </script>
 
 </head>
 
 <body id="category-page">
-
         <div id="home-extra-top"></div>
-
         <header>
             <div class="header">
                 <!--  SubTemplate: cuenta-header -->
@@ -70,13 +69,18 @@
                               <span class="checkmark"></span>
                             </label>
                     </div>
-                    <div id="rango-precio"  class="row">
-                        <h2 class="filtroh2">Precio</h2>
-                        <label for="priceI">MENOR</label><input type="text" id="priceI" name="priceI" />
-                        <div style="margin-top:20px;"></div>
-                        <label for="priceF">MAYOR</label><input type="text" id="priceF" name="priceF" />
-                        <button onClick="addData(priceI.value, priceF.value)">APLICAR</button> 
-                    </div>                    
+                    <div data-role="main" class="ui-content row" id="rango-precio">
+                        <h2 class="filtroh2">Rango de Precios</h2>                            
+                        <form method="post" action="addData(priceI.value, priceF.value)">
+                          <div data-role="rangeslider">
+                            <span id="valor_min"></span>
+                            <input type="range" name="price_min" id="price_min" value="1" min="1" max="1000" class="slider"/>
+                            <span id="valor_max"></span>
+                            <input type="range" name="price_max" id="price_max" value="1000" min="1" max="1000" class="slider"/>
+                          </div>
+                            <button>APLICAR</button> 
+                        </form>
+                    </div>
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-9">
@@ -151,7 +155,22 @@
         <vtex:template id="footer-agro" />
         <!-- /SubTemplate: Footer -->
 
+        <script>
+                var slider_min = document.getElementById("price_min");
+                var slider_max = document.getElementById("price_max");
+                var output_min = document.getElementById("valor_min");
+                var output_max = document.getElementById("valor_max");
+                output_min.innerHTML = slider_min.value;
+                output_max.innerHTML = slider_max.value;
+                
+                slider_min.oninput = function() {
+                  output_min.innerHTML = "$ "+this.value+" MXN";
+                }
 
+                slider_max.oninput = function() {
+                  output_max.innerHTML = "$ "+this.value+" MXN";
+                }
+        </script>
 </body>
 
 <vtex:template id="commonScriptsAgro" />

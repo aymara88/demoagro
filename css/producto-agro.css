@@ -1,0 +1,73 @@
+/*contenido ancho*/
+section#product-content {
+    width: 85%;
+    margin-top: 50px;
+}
+
+/*estilos del carrusel de imagenes de detalle de producto*/
+body#product-page ul.thumbs .slick-prev:before {
+    content: "\f077";
+}
+
+body#product-page ul.thumbs .slick-next:before {
+    content: "\f078";
+}
+
+body#product-page ul.thumbs button.slick-prev.slick-arrow {
+    position: relative;
+    left: 20px;
+}
+
+body#product-page ul.thumbs button.slick-next.slick-arrow {
+    position: relative;
+    right: -20px;
+    top: 20px;
+}
+
+.slick-slide img {
+    margin: 0 !important;
+    padding: 0;
+}
+
+.product-image .apresentacao .thumbs a {
+    width: 60px;
+    outline-color: transparent;
+}
+
+li.slick-slide.slick-active:focus {
+    outline-color: transparent;
+}
+
+/*generales*/
+.product-details .product-name .productName {
+    color: #000011b8;
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+a.link-ancora strong {
+    display: none;
+}
+
+.rating-produto:before,
+.rating-demonstrativo:before,
+.rating-wrapper .rating:before {
+    color: green;
+    position: relative;
+    left: 8px;
+}
+
+a.link-ancora {
+    position: relative;
+    bottom: 20px;
+}
+
+div.product-name h1 div#reviews-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rating-produto:after {
+    text-align: right;
+}
