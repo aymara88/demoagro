@@ -68,6 +68,200 @@ div.product-name h1 div#reviews-container {
     justify-content: flex-end;
 }
 
-.rating-produto:after {
+body#product-page .rating-produto:after {
     text-align: right;
+}
+
+body#product-page .product-details .product-name {
+    margin-bottom: -30px;
+}
+
+body#product-page .product-details .price-box .descricao-preco .valor-de {
+    font-size: 0;
+}
+
+body#product-page .product-details .price-box .descricao-preco .valor-de strong {
+    font-size: 14px;
+}
+
+body#product-page .product-details .price-box .descricao-preco .valor-de strong:after {
+    content: " MXN";
+}
+
+body#product-page .product-details .price-box .descricao-preco .valor-por strong {
+    color: darkgreen;
+    font-size: 14px;
+}
+
+body#product-page .product-details .price-box .descricao-preco .valor-por strong:after {
+    content: " MXN";
+}
+
+body#product-page span.economia {
+    font-size: 14px;
+}
+
+body#product-page .product-details .price-box .economia-de:before {
+    content: "Ahorras ";
+    font-size: 14px;
+}
+
+body#product-page .product-details .price-box .economia-de {
+    font-size: 0;
+}
+
+body#product-page .product-details .seletor-sku {
+    margin-top: 15px;
+}
+
+body#product-page .buy-button.buy-button-ref {
+    background-color: green;
+    border-radius: 0;
+    color: #fff !important;
+    font-size: 0;
+    font-weight: 100;
+    padding: 5px 15px;
+}
+
+body#product-page a.buy-button.buy-button-ref:after {
+    content: "AÑADIR AL CARRITO";
+    font-size: 18px;
+}
+
+body#product-page .buy-button-box .box-qtd,
+body#product-page .buy-button-box .box-qtd .qtd {
+    border-radius: 0;
+}
+
+body#product-page .a2a_kit.a2a_kit_size_32.a2a_default_style {
+    margin-top: 30px;
+}
+
+body#product-page .a2a_kit.a2a_kit_size_32.a2a_default_style a {
+    margin-right: 10px;
+}
+
+body#product-page .a2a_kit.a2a_kit_size_32.a2a_default_style a:after {
+    content: "Compartir";
+    padding: 0 10px;
+    position: relative;
+    top: 8px;
+}
+
+body#product-page a.a2a_button_facebook {
+    background: rgb(59, 89, 152);
+}
+
+body#product-page a.a2a_button_twitter {
+    background: rgb(85, 172, 238);
+}
+
+body#product-page a.a2a_button_google_gmail {
+    background: rgb(221, 83, 71);
+}
+
+body#product-page a.a2a_button_facebook,
+body#product-page a.a2a_button_twitter,
+body#product-page a.a2a_button_google_gmail {
+    color: #fff !important;
+}
+
+body#product-page a.btn.btn-default {
+    font-size: 16px;
+    color: green !important;
+    margin-left: -8px !important;
+    font-weight: bold;
+}
+
+body#product-page .product-description .btn-group {
+    margin-bottom: 5px;
+}
+
+body#product-page .product-description .product-description-box h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+body#product-page .rating-avalie .ratingStar.emptyRatingStar:before,
+body#product-page .rating-avalie .ratingStar.filledRatingStar:before {
+    color: green;
+}
+
+body#product-page #reviews .avalie-produto #opcoes-avalie .firadio {
+    margin: -5px 0 0 0;
+}
+
+body#product-page #reviews #formUserReview .avaliar a,
+body#product-page #reviews #lnkPubliqueResenha {
+    background-color: green;
+    border-radius: 0;
+}
+
+body#product-page input.firadio:before {
+    content: ".";
+    background-color: #fff;
+    padding: 4px 8px;
+    border-radius: 50%;
+    border: 1px solid green;
+    position: relative;
+    top: 10px;
+    left: -5px;
+}
+
+body#product-page #reviews .avalie-produto #opcoes-avalie .firadio:checked:before {
+    background-color: green;
+    color: #fff;
+    content: "✓";
+    padding: 4px 6px;
+}
+
+body#product-page p.opiniaoInfo,
+body#product-page p.aviso-resenha {
+    color: #000;
+}
+
+body#product-page #reviews #formUserReview .avaliar a,
+body#product-page #reviews #lnkPubliqueResenha {
+    background-color: green;
+    border-radius: 0;
+}
+
+body#product-page #publishUserReview #formUserReview .header .close a {
+    font-size: 0;
+}
+
+body#product-page #publishUserReview #formUserReview .header .close a:before {
+    content: "X";
+    font-size: 18px;
+}
+
+body#product-page span#spnRatingProdutoTop {
+    float: right;
+}
+
+body#product-page div.row {
+    clear: both;
+}
+
+#comprar-flutuante .descricao-preco .valor-por strong {
+    color: green;
+    font-size: 16px;
+}
+
+body#product-page a.buy-button.buy-button-ref::after {
+    CONTENT: "AÑADIR A LA BOLSA";
+    FONT-SIZE: 14PX;
+}
+
+button#myBtn {
+    border: 0;
+    background: green;
+    color: #fff;
+    padding: 7px 14px;
+    font-size: 15px;
+    height: 53px;
+}
+
+.col-comprar.col-xs-12.col-sm-5.col-md-4.col-lg-3 {
+    display: flex;
 }

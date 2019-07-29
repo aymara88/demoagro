@@ -16,6 +16,10 @@
 
     <script>
         console.log('lov')
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
     </script>
 
 </head>
@@ -128,6 +132,19 @@
                         <vtex.cmc:BuyButton />
                     </div><!-- .buy-button-box -->
 
+                            			<!-- AddToAny BEGIN -->
+                                        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                                            <a class="a2a_button_facebook"></a>
+                                            <a class="a2a_button_twitter"></a>
+                                            <a class="a2a_button_google_gmail"></a>
+                                        </div>
+                                        <script>
+                                            var a2a_config = a2a_config || {};
+                                            a2a_config.locale = "es";
+                                        </script>
+                                        <script src="https://static.addtoany.com/menu/page.js"></script>
+                                        <!-- AddToAny END -->
+
                 </div><!-- .product-info -->
 
             </div><!-- .product-details -->
@@ -138,13 +155,7 @@
                     <a href="#specification" class="btn btn-default">ESPECIFICACIONES DEL PRODUCTO</a>
                     <a href="#reviews" class="btn btn-default">OPINIONES</a>
                 </div>
-
-                <div id="product-extra-description-1"></div>
-
-                <div class="product-description-box">
-                    <!--  Component: Cross selling -->
-                    <vtex.cmc:BuyTogether />
-                </div>
+                <hr/>
 
                 <div class="product-description-box">
                     <div id="specification">
@@ -166,9 +177,8 @@
                 </div>
 
                 <div class="product-description-box">
-                    <div class="showcase-default showcase-owl">
-                        <vtex:contentPlaceHolder id="Quem-viu-tambem-comprou" />
-                    </div><!-- .showcase-default -->
+                    <!--  Component: Cross selling -->
+                    <vtex.cmc:BuyTogether />
                 </div>
             </div><!-- .product-description -->
 
@@ -196,6 +206,7 @@
                         <div class="buy-button-box">
                             <vtex.cmc:BuyButton />
                         </div><!-- .buy-button-box -->
+                        <button onclick="topFunction()" id="myBtn" title="compra">AÑADIR A LA BOLSA</button>
                     </div>
                 </div>
             </div>
