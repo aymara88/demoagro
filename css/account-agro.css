@@ -1,0 +1,299 @@
+/*ancho del contenido y ajustes*/
+body#account-page section#account-content {
+    width: 85%;
+}
+
+body#account-page aside.vtex-account__menu.pv9.pv0-m-2.ph9.ph7-m.ph8-l.w-20-m.w-100 {
+    width: 30% !important;
+}
+
+div#account-extra-top {
+    margin-top: 50px;
+}
+
+.w-100.mw9.pv7-m.pv9-l.flex {
+    padding-top: 0;
+}
+
+/*estilos de los botones acorde a diseño*/
+.bg-action-primary,
+.hover-bg-action-primary:focus,
+.hover-bg-action-primary:hover {
+    background-color: green;
+}
+
+.b--action-primary,
+.b--muted-4,
+.b--action-primary,
+.hover-b--action-primary:focus,
+.hover-b--action-primary:hover {
+    border-color: green;
+}
+
+.c-action-primary {
+    color: green;
+}
+
+.c-danger {
+    color: gray;
+}
+
+.hover-b--light-blue:focus,
+.hover-b--light-blue:hover {
+    border-color: #fff;
+}
+
+.hover-bg-light-blue:focus,
+.hover-bg-light-blue:hover {
+    background-color: #fff;
+}
+
+.hover-heavy-blue:focus,
+.hover-heavy-blue:hover {
+    color: green;
+}
+
+.bg-washed-blue {
+    background-color: #fff;
+}
+
+.b--washed-blue {
+    border-color: #fff;
+}
+
+.blue {
+    color: green;
+}
+
+/*traducciones*/
+span.flex.align-baseline.relative {
+    color: green;
+    font-size: 0;
+}
+
+span.flex.align-baseline.relative:after {
+    content: 'REGRESAR';
+    font-size: 14px;
+    position: absolute;
+    top: -4px;
+    left: 20px;
+}
+
+.vtex-account__user-greeting.f4.fw3.nowrap span:before {
+    font-size: 22px;
+    content: 'Hola';
+}
+
+.vtex-account__user-greeting.f4.fw3.nowrap span {
+    font-size: 0;
+}
+
+/* mostrar seccion de suscripción al boletín*/
+div#news-letter,
+div#info-personal {
+    opacity: 1;
+}
+
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.panel-default {
+    border-color: transparent;
+}
+
+ul.nav-tabs li a.active {
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+a,
+a:visited,
+a:active {
+    color: #000;
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+    text-decoration: none;
+    background-color: #fff;
+}
+
+/*estilo checkbox*/
+.cbx {
+    position: relative;
+    top: 1px;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #c8ccd4;
+    border-radius: 3px;
+    vertical-align: middle;
+    transition: background 0.1s ease;
+    cursor: pointer;
+}
+
+.cbx:after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    width: 5px;
+    height: 11px;
+    opacity: 0;
+    transform: rotate(45deg) scale(0);
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: all 0.3s ease;
+    transition-delay: 0.15s;
+}
+
+.lbl {
+    margin-left: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#cbx:checked~.cbx {
+    border-color: transparent;
+    background: green;
+    animation: jelly 0.6s ease;
+}
+
+#cbx:checked~.cbx:after {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+}
+
+.cntr {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@-moz-keyframes jelly {
+    from {
+        transform: scale(1, 1);
+    }
+
+    30% {
+        transform: scale(1.25, 0.75);
+    }
+
+    40% {
+        transform: scale(0.75, 1.25);
+    }
+
+    50% {
+        transform: scale(1.15, 0.85);
+    }
+
+    65% {
+        transform: scale(0.95, 1.05);
+    }
+
+    75% {
+        transform: scale(1.05, 0.95);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+@-webkit-keyframes jelly {
+    from {
+        transform: scale(1, 1);
+    }
+
+    30% {
+        transform: scale(1.25, 0.75);
+    }
+
+    40% {
+        transform: scale(0.75, 1.25);
+    }
+
+    50% {
+        transform: scale(1.15, 0.85);
+    }
+
+    65% {
+        transform: scale(0.95, 1.05);
+    }
+
+    75% {
+        transform: scale(1.05, 0.95);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+@-o-keyframes jelly {
+    from {
+        transform: scale(1, 1);
+    }
+
+    30% {
+        transform: scale(1.25, 0.75);
+    }
+
+    40% {
+        transform: scale(0.75, 1.25);
+    }
+
+    50% {
+        transform: scale(1.15, 0.85);
+    }
+
+    65% {
+        transform: scale(0.95, 1.05);
+    }
+
+    75% {
+        transform: scale(1.05, 0.95);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes jelly {
+    from {
+        transform: scale(1, 1);
+    }
+
+    30% {
+        transform: scale(1.25, 0.75);
+    }
+
+    40% {
+        transform: scale(0.75, 1.25);
+    }
+
+    50% {
+        transform: scale(1.15, 0.85);
+    }
+
+    65% {
+        transform: scale(0.95, 1.05);
+    }
+
+    75% {
+        transform: scale(1.05, 0.95);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+input#cbx {
+    display: none;
+}

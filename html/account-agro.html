@@ -6,11 +6,45 @@
      <title> Demo Agro</title>
      <vtex:metaTags />
      <vtex:template id="commonStylesAgro" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <meta name="viewport" content="width=device-width,
+                    initial-scale=1.0" />
      <link rel="shortcut icon" href="/arquivos/logo-agro.png" />
-
+     <link rel="stylesheet" href="/arquivos/account-agro.css" />
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
      <script>
-         console.log('lov')
+         /* Funcion para habilitar boton de envio */
+         function habilitaBoton() {
+             document.getElementById('btnEnviar').style.display = 'inline-block';
+             document.getElementById('btnBloq').style.display = 'none';
+         }
+         /* Fin de la funcion*/
+         /* Funcion para envio de alerta según */
+         function validaCambio() {
+             let newsletter = document.getElementById('newsletter').checked;
+             if (newsletter == true) {
+                 swal("Yes!", "You are subscribe to receive news and promotions", "success");
+             } else if (newsletter == false) {
+                 swal("Oh no!", "Please, Check the box to subscribe.", "warning");
+             }
+             return false;
+         }
+         /* Fin de la funcion*/
+         function activaMenu(id_div) {
+             $("#info-personal").removeClass("show in active");
+             $("#news-letter").removeClass("show in active");
+             switch (id_div) {
+                 case "info-personal":
+                     $("#info-personal").addClass("show active");
+                     $("a[href='#info-personal']").addClass("active");
+                     $("a[href='#news-letter']").removeClass("active");
+                     break;
+                 case "news-letter":
+                     $("#news-letter").addClass("show active");
+                     $("a[href='#news-letter']").addClass("active");
+                     $("a[href='#info-personal']").removeClass("active");
+                     break;
+             }
+         }
      </script>
 
  </head>
@@ -37,19 +71,59 @@
 
          <div id="account-extra-top"></div>
 
-         <section id="account-content" class="container">
+         <section id="account-content" class="container-fluid">
 
-             <div class="row">
-
-                 <div class="col-xs-12 col-sm-6">
-                     <vtex.cmc:accountUserProfile />
+             <div class="panel with-nav-tabs panel-default">
+                 <div class="panel-heading">
+                     <ul class="nav nav-tabs">
+                         <li><a class="active" href="#info-personal" data-toggle="tab" onclick="return
+                                                    activaMenu('info-personal')">Información Personal</a></li>
+                         <li><a href="#news-letter" data-toggle="tab" onclick="return
+                                                    activaMenu('news-letter')">Suscripción al Boletín</a></li>
+                     </ul>
                  </div>
-                 <div class="col-xs-12 col-sm-6">
-                     <vtex.cmc:accountAddress />
-                 </div>
+                 <div class="panel-body">
+                     <div class="tab-content">
+                         <div class="tab-pane fade in active" id="info-personal">
+                             <div class="row">
+                                 <div class="col-xs-12
+                                                        col-sm-12">
+                                     <vtex.cmc:accountUserProfile />
+                                 </div>
+                                 <div class="col-xs-12
+                                                            col-sm-6">
+                                     <vtex.cmc:accountAddress />
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="tab-pane fade" id="news-letter">
+                             <div class="row">
+                                 <div class="col-xs-12">
 
+                                     <div class="cntr">
+                                         <input class="hidden-xs-up" id="cbx" type="checkbox" /><label class="cbx"
+                                             for="cbx"></label><label class="lbl" for="cbx"></label>
+                                         <button id='btnBloq' class="btn
+                                             btn-gris" onclick='return
+                                             validaCambio()'>Actualizar</button>
+                                     </div>
+
+                                     <h4 id='mensaje-news-letter'></h4>
+                                     <input type='checkbox' name='newsletter' id="newsletter"
+                                         class='compare-product-checkbox' onchange='habilitaBoton()'></input>
+                                     <label for="newsletter"></label>
+                                     <button id='btnEnviar' class="btn
+                                                                btn-naranja" onclick='newsletter()'
+                                         style='display:none'>Enviar</button>
+                                     <button id='btnBloq' class="btn
+                                                                btn-gris" onclick='return
+                                                                validaCambio()'>Enviar</button>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
              </div>
-
          </section><!-- #content -->
 
          <div id="account-extra-bottom"></div>
@@ -62,7 +136,6 @@
 
  </body>
  <vtex:template id="commonScriptsAgro" />
-
  <script type="text/javascript">
      $(document).ready(function () {
          var hash = $(location).attr('hash');
@@ -76,5 +149,6 @@
          });
      })
  </script>
+ <script src="/arquivos/account-translate.js"></script>
 
  </html>
